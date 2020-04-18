@@ -2,5 +2,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Label ID="Label1" runat="server" Text="Index"></asp:Label>
+    <asp:LinkButton ID="lkBtn" runat="server" OnClick="lkBtn_Click">Ver mapa</asp:LinkButton>
 </asp:Content>

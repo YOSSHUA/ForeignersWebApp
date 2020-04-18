@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace ForeignersWeb
 {
@@ -62,6 +64,41 @@ namespace ForeignersWeb
             }
 
             return resp;
+        }
+        public DataTable llenarDataTable(string query)
+        {
+            DataTable ans = new DataTable();
+            SqlConnection con;
+            try
+            {
+                con = getConnection();
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                da.Fill(ans);
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                ans = null;
+            }
+            return ans;
+        }
+        public void fillDDL(string query, DropDownList ddl, string table, string show, string value)
+        {
+            try
+            {
+                DataRow drow;
+                SqlConnection con = getConnection();
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataSet ds = new DataSet();
+                da.Fill(ds, table);
+
+                
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
