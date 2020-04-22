@@ -15,12 +15,21 @@ namespace ForeignersWeb
     {
 
         /// <summary>
-        /// lkBtn control.
+        /// lkBtnMap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lkBtn;
+        protected global::System.Web.UI.WebControls.LinkButton lkBtnMap;
+
+        /// <summary>
+        /// lkBtnAltaRenta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lkBtnAltaRenta;
     }
 }

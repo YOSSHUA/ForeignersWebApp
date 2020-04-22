@@ -81,6 +81,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Alta.aspx" />
+    <Content Include="AltaRenta.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -193,8 +195,24 @@
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="Establecimiento.cs" />
+    <Compile Include="Alta.aspx.cs">
+      <DependentUpon>Alta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alta.aspx.designer.cs">
+      <DependentUpon>Alta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaRenta.aspx.cs">
+      <DependentUpon>AltaRenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaRenta.aspx.designer.cs">
+      <DependentUpon>AltaRenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Alumno.cs" />
+    <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="DB\Conexion.cs" />
+    <Compile Include="Clases\Establecimiento.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -205,7 +223,7 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Locations.cs" />
+    <Compile Include="Clases\Locations.cs" />
     <Compile Include="Mapa.aspx.cs">
       <DependentUpon>Mapa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,7 +246,7 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Renta.cs" />
+    <Compile Include="Clases\Renta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
