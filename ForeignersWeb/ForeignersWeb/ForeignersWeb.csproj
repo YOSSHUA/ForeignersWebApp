@@ -83,6 +83,7 @@
   <ItemGroup>
     <Content Include="Alta.aspx" />
     <Content Include="AltaRenta.aspx" />
+    <Content Include="ClienteAlta.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -211,6 +212,13 @@
     </Compile>
     <Compile Include="Clases\Alumno.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="ClienteAlta.aspx.cs">
+      <DependentUpon>ClienteAlta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClienteAlta.aspx.designer.cs">
+      <DependentUpon>ClienteAlta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DB\Conexion.cs" />
     <Compile Include="Clases\Establecimiento.cs" />
     <Compile Include="Global.asax.cs">
