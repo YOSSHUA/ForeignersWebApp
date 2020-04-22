@@ -19,7 +19,7 @@ namespace ForeignersWeb
         {
             SqlConnection resp;
             try {
-                string conString = ConfigurationManager.ConnectionStrings["dbConnection"].ToString();
+                string conString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
                 resp = new SqlConnection(conString);
                 resp.Open();
             } catch (Exception ex)
@@ -57,82 +57,13 @@ namespace ForeignersWeb
                             dr1.Close();
                         }
                     }
+                    con.Close();
                 }catch(Exception ex)
                 {
-                    
+                    con.Close();
                 }
             }
-
-            return resp;
-        }
-        public String bajaCliente(String correo)
-        {
-            String resp = "No se pudo dar de baja";
-            SqlConnection con = getConnection();
-            if (con != null)
-            {
-                try
-                {
-                    string query = "delete Cliente where correo= '" + correo + "'";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    int res = cmd.ExecuteNonQuery();
-                    if (res != 0)
-                        resp = "Se dio de baja correctamente";
-                }
-                catch (Exception ex)
-                {
-
-                }
-            }
-
-            return resp;
-        }
-        public String bajaAnuncio(int idAnuncio)
-        {
-            String resp = " No se pudo eliminar";
-            SqlConnection con = getConnection();
-            if (con != null)
-            {
-                try
-                {
-                    string query = "delete RegAnuncio where idAnuncio= '" + idAnuncio + "'";
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    int res = cmd.ExecuteNonQuery();
-                    if (res != 0)
-                        resp = "Se elimino correctamente";
-                }
-                catch (Exception ex)
-                {
-
-                }
-            }
-
-            return resp;
-
-        }
-        public String altaCliente(String correo, String contra, String nombre, String apPat, String apMat, DateTime fN)
-        {
-            String resp = "No se dio de alta";
-            SqlConnection con = getConnection();
-            if (con != null)
-            {
-                try
-                {
-                    String f = String.Format("{0:MM/dd/yy}", fN);
-                    String.Format("{0:MM/dd/yy}", fN);
-                    String query = "insert into Cliente (correo, contra, nombre, apPat, apMat, fechaN) Values ('" + correo + "' , '" + contra + "','" + nombre + "', '" + apPat + "', '" + apMat + "','" + f + "')";
-                    SqlCommand cmd1 = new SqlCommand(query, con);
-                    int res =cmd1.ExecuteNonQuery();
-                    if (res != 0)
-                        resp = "Se dio de alta";
-
-
-
-                } catch( Exception ex)
-                {
-
-                }
-                }
+            
             return resp;
         }
         public DataTable llenarDataTable(string query)
@@ -145,7 +76,7 @@ namespace ForeignersWeb
                 SqlDataAdapter da = new SqlDataAdapter(query, con);
                 da.Fill(ans);
                 con.Close();
-
+                
             }
             catch (Exception ex)
             {
@@ -156,12 +87,17 @@ namespace ForeignersWeb
         public void fillDDL(string query, DropDownList ddl, string table, string show, string value)
         {
             try
-            {
-                DataRow drow;
+            {                
                 SqlConnection con = getConnection();
                 SqlDataAdapter da = new SqlDataAdapter(query, con);
                 DataSet ds = new DataSet();
                 da.Fill(ds, table);
+
+                ddl.DataSource = ds;
+                ddl.DataTextField = show;
+                ddl.DataValueField = value;
+                ddl.DataBind();
+                ddl.SelectedIndex = 0;
 
                 
             }
@@ -169,6 +105,47 @@ namespace ForeignersWeb
             {
 
             }
+        }
+        public SqlDataReader getReader(string query)
+        {
+            SqlDataReader dr;
+            SqlConnection con = getConnection();
+            if(con != null)
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    dr = cmd.ExecuteReader();
+                    
+                }catch(Exception ex)
+                {
+                    dr = null;                   
+                }
+            }
+            else
+            {
+                dr = null;
+            }
+            return dr;
+        }
+        public int executeQuery(string query)
+        {
+            int res = -1;
+            SqlConnection con;
+            SqlCommand cmd;
+            try
+            {
+                con = getConnection();
+                cmd = new SqlCommand(query, con);
+                res = cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                res = -1;   
+            }
+            return res;
         }
     }
 }

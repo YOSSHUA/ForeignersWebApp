@@ -10,8 +10,7 @@
         }
     </style>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASt_r2bn3WZMmgBVVQLluzFdstRqaMZzc&callback=initMap"></script>
-    <h3>My Google Maps Demo</h3>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASt_r2bn3WZMmgBVVQLluzFdstRqaMZzc&callback=initMap"></script>    
     <!--The div element for the map -->
     <div id="map"></div>
     <script type="text/javascript">
@@ -23,7 +22,6 @@
             };
             
             var markers = <%= _markers %>;
-            alert(markers[0].lat);
             var infoWindow = new google.maps.InfoWindow();
             var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
             for (i = 0; i < markers.length; i++) {

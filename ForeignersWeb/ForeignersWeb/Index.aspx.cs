@@ -21,5 +21,10 @@ namespace ForeignersWeb
         {
             Response.Redirect("Mapa.aspx");
         }
+
+        protected void lkBtnAltaRenta_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AltaRenta.aspx");
+        }
     }
 }

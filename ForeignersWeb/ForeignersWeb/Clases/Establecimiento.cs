@@ -13,7 +13,7 @@ namespace ForeignersWeb
         {
 
         }
-        public void llenarComboBoxTipos(DropDownList ddl)
+        public void FillDDLTypes(DropDownList ddl)
         {
             Conexion c = new Conexion();
             string query = "SELECT * FROM catTipoEst";
