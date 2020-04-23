@@ -66,6 +66,27 @@ namespace ForeignersWeb
             
             return resp;
         }
+
+        public int addImageInm(int idInm, byte[] foto)
+        {
+            int res = -1;
+            SqlConnection con = getConnection();
+            if(con!= null)
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("Insert into catFotosInm( idInm, foto) Values(@idInm, @foto)", con);
+                    cmd.Parameters.AddWithValue("@idInm", idInm);
+                    cmd.Parameters.AddWithValue("@foto", foto);
+                    res = cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex) {
+                    
+                }
+            }
+            return res;
+        }
+
         public DataTable llenarDataTable(string query)
         {
             DataTable ans = new DataTable();

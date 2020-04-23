@@ -54,6 +54,9 @@
     <Reference Include="GoogleMapsApi, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GoogleMapsApi.0.80.0\lib\net40\GoogleMapsApi.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.23.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.23\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -83,13 +86,13 @@
   <ItemGroup>
     <Content Include="Alta.aspx" />
     <Content Include="AltaRenta.aspx" />
+    <Content Include="AltaRenta2.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="Mapa.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -209,13 +212,17 @@
     <Compile Include="AltaRenta.aspx.designer.cs">
       <DependentUpon>AltaRenta.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AltaRenta2.aspx.cs">
+      <DependentUpon>AltaRenta2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaRenta2.aspx.designer.cs">
+      <DependentUpon>AltaRenta2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Alumno.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="DB\Conexion.cs" />
     <Compile Include="Clases\Establecimiento.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -275,6 +282,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

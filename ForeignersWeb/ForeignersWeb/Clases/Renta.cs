@@ -20,22 +20,21 @@ namespace ForeignersWeb
             DataTable resp = c.llenarDataTable(query);
             return resp;
         }
-        public int altaRenta(int idProp, string desc, double precio, int numH, bool cocina,string tel, string dir, string del, string cp, string edo, int idPais, double lat, double lng)
+        public int altaRenta(int idProp, string desc, double precio, int numH, bool cocina,string tel, string dir, string del, string cp, string edo, int idPais, string lat, string lng)
         {
             int result = 0;
             String query = "insert into Inmueble (idPropietario, descripcion, precio, numHab, tel, cocina, calleNum, munDel, codP," +
                 "estado, idPais, lng, lat) Values ('" + idProp + "' , '" + desc + "','" + precio + "','" + numH + "','" + tel + "','" + cocina + "','"
                 + dir + "','" + del + "','" + cp + "','" + edo + "','" + idPais + "','" + lng + "','" + lat + "')";
             Conexion cone = new Conexion();
-            cone.executeQuery(query);
+            result = cone.executeQuery(query);
             return result;
         }
         public int altaImages(int idInm, byte[] image)
         {
             int res=-1;
-            Conexion c = new Conexion();
-            string query="";
-            c.executeQuery(query);
+            Conexion c = new Conexion();            
+            res = c.addImageInm(idInm, image);
             return res;
         }
         public int getLastId(int idProp)

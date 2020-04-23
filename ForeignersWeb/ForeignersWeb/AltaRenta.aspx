@@ -5,36 +5,9 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 
-    <script type="text/javascript">
+    <asp:ScriptManager runat="server" EnablePartialRendering="true"></asp:ScriptManager>
 
-        var counter = 0;
-
-        function AddFileUpload() {
-
-            var div = document.createElement('DIV');
-
-            div.innerHTML = '<input id="file' + counter + '" name = "file' + counter +
-
-                '" type="file" />' +
-
-                '<input id="Button' + counter + '" type="button" ' +
-
-                'value="Borrar foto" onclick = "RemoveFileUpload(this)" />';
-
-            document.getElementById("FileUploadContainer").appendChild(div);
-
-            counter++;
-
-        }
-
-        function RemoveFileUpload(div) {
-
-            document.getElementById("FileUploadContainer").removeChild(div.parentNode);
-
-        }
-
-    </script>
-
+    
     <div id="divDatos" runat="server">
 
         <asp:Label ID="lblDesc" runat="server" Text="Descripcion"></asp:Label>
@@ -94,8 +67,10 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASt_r2bn3WZMmgBVVQLluzFdstRqaMZzc"></script>
         <!--The div element for the map -->
         <asp:Button ID="btnBuscarDir" runat="server" Text="Buscar direccion" OnClick="btnBuscarDir_Click" />
+        <asp:Label ID="lblLat" runat="server" Text="" Visible="false"></asp:Label>
+        <asp:Label ID="lblLng" runat="server" Text="" Visible ="false"></asp:Label>
         <div id="map"></div>
-        <script type="text/javascript">            
+        <script type="text/javascript" >            
 
             var map;
             var mapcode;
@@ -127,28 +102,14 @@
     </div>
 
 
+&nbsp;            
+        <asp:Button ID="btnUpload" runat="server" Text="Registrar inmueble" OnClick="btnUpload_Click" />    
 
 
 
-
-    <div id="div1" runat="server" enctype="multipart/form-data" method="post">
-
-        <span style="font-family: Arial">Agregar foto</span>&nbsp;&nbsp;
-
-    <input id="Button1" type="button" value="Agregar" onclick="AddFileUpload()" />
-
-        <br />
-        <br />
-
-        <div id="FileUploadContainer">
-        </div>
-
-        <br />
-
-        <asp:Button ID="btnUpload" runat="server"
-            Text="Dar de alta" OnClick="btnUpload_Click" />
+        
 
 
-    </div>
+    
 
 </asp:Content>
