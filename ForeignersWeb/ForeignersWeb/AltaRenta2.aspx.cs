@@ -15,19 +15,58 @@ namespace ForeignersWeb
             idInm = Convert.ToInt32(Session["idInm"]);
         }
 
-        protected void btnUp_Click(object sender, EventArgs e)
+        protected void btnUpload_Click(object sender, EventArgs e)
         {
             Renta r = new Renta();
-            if (pic1.HasFile)
+
+            for (int i = 0; i < Request.Files.Count; i++)
+
+            {
+
+                HttpPostedFile PostedFile = Request.Files[i];
+
+                if (PostedFile.ContentLength > 0)
+
+                {
+                    int imagefilelenth = PostedFile.ContentLength;
+                    byte[] imgarray = new byte[imagefilelenth];
+                    HttpPostedFile image = PostedFile;
+                    image.InputStream.Read(imgarray, 0, imagefilelenth);
+                    int result = r.altaImages(idInm, imgarray);
+                    if (result <= 0)
+                        Response.Write("<script>alert('Hubo un error al subir foto"+i+"');</script>");                    
+
+                }
+
+            }
+
+
+
+
+            /*
+             * 
+    <asp:FileUpload ID="pic1" runat="server" />
+    <br />
+    <asp:FileUpload ID="pic2" runat="server" />
+    <br />
+    <asp:FileUpload ID="pic3" runat="server" />
+    <br />
+    <asp:FileUpload ID="pic4" runat="server" />
+    <br />
+    <asp:Button ID="btnUp" runat="server" Text="Subir fotos" OnClick="btnUp_Click" />
+             * 
+             * 
+             * if (pic1.HasFile)
             {
                 int imagefilelenth = pic1.PostedFile.ContentLength;
                 byte[] imgarray = new byte[imagefilelenth];
                 HttpPostedFile image = pic1.PostedFile;
                 image.InputStream.Read(imgarray, 0, imagefilelenth);
-                int result = r.altaImages(idInm, imgarray);                        
-                if(result <= 0)
+                int result = r.altaImages(idInm, imgarray);
+                if (result <= 0)
                     Response.Write("<script>alert('Hubo un error al subir foto 1');</script>");
             }
+
             if (pic2.HasFile)
             {
                 int imagefilelenth = pic2.PostedFile.ContentLength;
@@ -58,10 +97,11 @@ namespace ForeignersWeb
                 if (result <= 0)
                     Response.Write("<script>alert('Hubo un error al subir foto 4');</script>");
             }
+            */
             Session["idInm"] = null;
             Response.Redirect("Index.aspx");
 
         }
-        
+
     }
 }
