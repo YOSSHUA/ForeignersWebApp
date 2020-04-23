@@ -28,5 +28,51 @@ namespace ForeignersWeb
             return resp;
               
         }
+
+        public String altaCliente(String correo, String contra, String nombre, String apPat, String apMat, DateTime fN)
+        {
+            String resp = "No se pudo dar de alta ";
+            Conexion c = new Conexion();
+            if(c != null)
+                try
+                {
+
+                    String f = String.Format("{0:MM/dd/yy}", fN);
+                    String.Format("{0:MM/dd/yy}", fN);
+                    String query = "insert into Cliente (correo, contra, nombre, apPat, apMat, fechaN) Values ('" + correo + "' , '" + contra + "','" + nombre + "', '" + apPat + "', '" + apMat + "','" + f + "')";
+
+                  int res=  c.executeQuery(query);
+                    
+                    if (res != 0)
+                        resp = "si se dio de alta";
+                }
+                catch ( Exception ex){
+
+            }
+
+           
+
+            return resp;
+        }
+        public String bajaCliente (String correo)
+        {
+            String resp = "no se pudo eliminar ";
+
+            Conexion c = new Conexion();
+            if (c != null)
+                try
+                {
+                    string query = "DELETE FROM Cliente WHERE correo =" + correo;
+                   
+                    int r = c.executeQuery(query);
+                    if (r != 0)
+                        resp = "se elimino ";
+                }catch(Exception ex)
+                {
+
+                }
+                    return resp;
+        }
+
     }
 }
