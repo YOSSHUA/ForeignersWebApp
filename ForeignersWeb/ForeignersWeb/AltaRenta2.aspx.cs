@@ -9,17 +9,22 @@ namespace ForeignersWeb
 {
     public partial class AltaRenta2 : System.Web.UI.Page
     {
+        protected int idProp_;
         protected int idInm;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["mail"] == null || Session["idInm"]==null)
+            if (Session["idProp"] == null || Session["idInm"]==null)
             {
                 Response.Write("<script>alert('Hubo un error');</script>");
                 Session["type"] = null;
-                Session["mail"] = null;
                 Response.Redirect("Login.aspx");
             }
-            idInm = Convert.ToInt32(Session["idInm"]);
+            else
+            {
+                idProp_ = Convert.ToInt32(Session["idProp"].ToString());
+                idInm = Convert.ToInt32(Session["idInm"]);
+            }
+            
         }
 
         protected void btnUpload_Click(object sender, EventArgs e)
@@ -48,7 +53,7 @@ namespace ForeignersWeb
             }
       
             Session["idInm"] = null;
-            Response.Redirect("Index.aspx");
+            Response.Redirect("IndexClient.aspx");
 
         }
 

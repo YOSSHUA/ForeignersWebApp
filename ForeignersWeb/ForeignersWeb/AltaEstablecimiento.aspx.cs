@@ -16,12 +16,15 @@ namespace ForeignersWeb
         protected string _lng0 = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["mail"] == null)
+            if (Session["idProp"] == null)
             {
                 Response.Write("<script>alert('Hubo un error');</script>");
                 Session["type"] = null;
-                Session["mail"] = null;
                 Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                idProp_ = Convert.ToInt32(Session["idProp"].ToString());
             }
             if (!IsPostBack)
             {
@@ -31,15 +34,6 @@ namespace ForeignersWeb
                 con.fillDDL("SELECT idTipo, descripcion FROM catTipoEst", ddlTipoEst, "catTipoEst", "descripcion", "idTipo");
             }
 
-            Cliente c = new Cliente();
-            idProp_ = c.getId(Session["mail"].ToString());
-            if (idProp_ == -1)
-            {
-                Response.Write("<script>alert('Hubo un error');</script>");
-                Session["type"] = null;
-                Session["mail"] = null;
-                Response.Redirect("Login.aspx");
-            }
         }
 
         protected void btnUpload_Click(object sender, EventArgs e)
@@ -67,7 +61,7 @@ namespace ForeignersWeb
                         if (res > 0)
                         {
                             Response.Write("<script>alert('Se registro correctamente su establecimiento');</script>");
-                            Response.Redirect("Index.aspx");
+                            Response.Redirect("IndexClient.aspx");
 
                         }
                     }

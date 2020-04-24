@@ -88,7 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Alta.aspx" />
+    <Content Include="AltaAnuncio.aspx" />
     <Content Include="AltaCliente.aspx" />
     <Content Include="AltaEstablecimiento.aspx" />
     <Content Include="AltaRenta.aspx" />
@@ -102,7 +102,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Index.aspx" />
+    <Content Include="IndexClient.aspx" />
+    <Content Include="IndexStudent.aspx" />
     <Content Include="Mapa.aspx" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
@@ -294,12 +295,12 @@
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alta.aspx.cs">
-      <DependentUpon>Alta.aspx</DependentUpon>
+    <Compile Include="AltaAnuncio.aspx.cs">
+      <DependentUpon>AltaAnuncio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alta.aspx.designer.cs">
-      <DependentUpon>Alta.aspx</DependentUpon>
+    <Compile Include="AltaAnuncio.aspx.designer.cs">
+      <DependentUpon>AltaAnuncio.aspx</DependentUpon>
     </Compile>
     <Compile Include="AltaCliente.aspx.cs">
       <DependentUpon>AltaCliente.aspx</DependentUpon>
@@ -347,14 +348,21 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="DB\Conexion.cs" />
     <Compile Include="Clases\Establecimiento.cs" />
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="IndexClient.aspx.cs">
+      <DependentUpon>IndexClient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="IndexClient.aspx.designer.cs">
+      <DependentUpon>IndexClient.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\Locations.cs" />
+    <Compile Include="IndexStudent.aspx.cs">
+      <DependentUpon>IndexStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexStudent.aspx.designer.cs">
+      <DependentUpon>IndexStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mapa.aspx.cs">
       <DependentUpon>Mapa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

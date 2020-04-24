@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ForeignersWeb
 {
-    public partial class Alta : System.Web.UI.Page
+    public partial class IndexStudent : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

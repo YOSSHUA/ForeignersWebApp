@@ -11,40 +11,30 @@ namespace ForeignersWeb
 {
     public partial class BajaAnuncio : System.Web.UI.Page
     {
+        protected int _idProp;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["idProp"] == null)
+            {
+                Response.Write("<script>alert('Hubo un error');</script>");
+                Session["type"] = null;
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                _idProp= Convert.ToInt32(Session["idProp"].ToString());
+            }
             if (!IsPostBack)
             {
-                String correo = Session["mail"].ToString();
-                Cliente cli = new Cliente();
-                int idcli = cli.getId(correo);
+                
 
                 Conexion c = new Conexion();
-                SqlConnection miConexion = c.getConnection();
-                if (miConexion != null)
-                {
-                    try
-                    {
-                        String query = "Select idAnuncio, titulo as 'Título', fechaIni as 'Fecha de inicio', fechaVig as" +
-                            "'Fecha de vigencia', descripcion as 'Descripción' from RegAnuncio where idCliente='" + idcli + "'AND fechaVig> GETDATE()";
-                        SqlDataReader dr = c.getReader(query);
-                        SqlCommand cmd = new SqlCommand(query, miConexion);
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        DataSet ds = new DataSet();
-                        da.Fill(ds);
-
-                        gvRegAnuncios.DataSource = ds;
-                        gvRegAnuncios.DataBind();
-
-
-
-                    }
-                    catch (Exception ex)
-                    {
-                        
-                        
-                    }
-                }
+                
+                String query = "Select idAnuncio, titulo as 'Título', fechaIni as 'Fecha de inicio', fechaVig as" +
+                    "'Fecha de vigencia', descripcion as 'Descripción' from RegAnuncio where idCliente='" + _idProp + "'AND fechaVig> GETDATE()";
+                int result = c.fillGrid(query, gvRegAnuncios);
+                if(result < 0)
+                    Response.Write("<script>alert('Hubo un error al cargar los anuncios');</script>");
             }
         }
 
@@ -67,11 +57,6 @@ namespace ForeignersWeb
 
                         if (res != 0)
                             Response.Write("<script>alert('Se dio de baja');</script>");
-
-
-
-
-
 
                     }
                     catch (Exception err)

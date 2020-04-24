@@ -7,11 +7,9 @@
     <p>
         <asp:GridView ID="gvRegAnuncios" runat="server">
         </asp:GridView>
-    </p>
+    </p>    
     <p>
-        Selecciona el id del anuncio que quieres eliminar.</p>
-    <p>
-        Id de anuncio que quiero eliminar:&nbsp;&nbsp;
+        Escribe el Id de anuncio que quieres eliminar:&nbsp;&nbsp;
         <asp:TextBox ID="txAnuncio" runat="server"></asp:TextBox>
     </p>
     <p>

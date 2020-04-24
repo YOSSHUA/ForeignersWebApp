@@ -204,5 +204,27 @@ namespace ForeignersWeb
             }
             return res;
         }
+        public int fillGrid(string query, GridView gv)
+        {
+            int resp = -1;
+            SqlConnection con = getConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                gv.DataSource = ds;
+                gv.DataBind();
+                resp = 1;
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return resp;
+        }
     }
 }

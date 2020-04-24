@@ -20,12 +20,15 @@ namespace ForeignersWeb
         protected string _lng = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["mail"] == null)
+            if (Session["idProp"] == null)
             {
                 Response.Write("<script>alert('Hubo un error');</script>");
                 Session["type"] = null;
-                Session["mail"] = null;
                 Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                idProp_ = Convert.ToInt32(Session["idProp"].ToString());
             }
             if (!IsPostBack)
             { 
@@ -33,16 +36,7 @@ namespace ForeignersWeb
                 con.fillDDL("SELECT idPais, nombre FROM catPaises", ddlPais, "catPaises", "nombre", "idPais");
 
             }
-            
-            Cliente c = new Cliente();
-            idProp_ = c.getId(Session["mail"].ToString());
-            if (idProp_ == -1)
-            {
-                Response.Write("<script>alert('Hubo un error');</script>");
-                Session["type"] = null;
-                Session["mail"] = null;
-                Response.Redirect("Login.aspx");
-            }
+                        
         }
 
         protected void btnUpload_Click(object sender, EventArgs e)
