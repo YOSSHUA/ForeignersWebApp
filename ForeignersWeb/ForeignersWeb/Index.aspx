@@ -7,7 +7,9 @@
     &nbsp;&nbsp;<asp:LinkButton ID="lkBtnAltaCliente" runat="server" OnClick="lkBtnAltaCliente_Click">Alta cliente</asp:LinkButton>
     &nbsp;
     <asp:LinkButton ID="lkBajaAnuncio" runat="server" OnClick="lkBajaAnuncio_Click">Baja anuncio</asp:LinkButton>
-    &nbsp;&nbsp;
+    &nbsp;
+    <asp:LinkButton ID="lkBajaCliente" runat="server" OnClick="lkBajaCliente_Click">Baja cliente</asp:LinkButton>
+    &nbsp;
 
     <asp:LinkButton ID="lkBtnAltaRenta" runat="server" OnClick="lkBtnAltaRenta_Click">Alta de inmueble en renta</asp:LinkButton>
      

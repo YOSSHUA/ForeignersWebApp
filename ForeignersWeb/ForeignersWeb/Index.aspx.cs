@@ -36,5 +36,10 @@ namespace ForeignersWeb
         {
             Response.Redirect("BajaAnuncio.aspx");
         }
+
+        protected void lkBajaCliente_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("BajaCliente.aspx");
+        }
     }
 }

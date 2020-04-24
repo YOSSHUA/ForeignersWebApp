@@ -62,7 +62,7 @@ namespace ForeignersWeb
             if (c != null)
                 try
                 {
-                    string query = "DELETE FROM Cliente WHERE correo =" + correo;
+                    string query = "DELETE FROM Cliente WHERE correo = '" + correo+"'";
                    
                     int r = c.executeQuery(query);
                     if (r != 0)

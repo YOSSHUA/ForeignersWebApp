@@ -89,6 +89,7 @@
     <Content Include="AltaRenta.aspx" />
     <Content Include="AltaRenta2.aspx" />
     <Content Include="BajaAnuncio.aspx" />
+    <Content Include="BajaCliente.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -234,6 +235,13 @@
     </Compile>
     <Compile Include="BajaAnuncio.aspx.designer.cs">
       <DependentUpon>BajaAnuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BajaCliente.aspx.cs">
+      <DependentUpon>BajaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BajaCliente.aspx.designer.cs">
+      <DependentUpon>BajaCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\Alumno.cs" />
     <Compile Include="Clases\Cliente.cs" />
