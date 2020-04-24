@@ -54,7 +54,7 @@ namespace ForeignersWeb
 
             return resp;
         }
-        public String bajaCliente (String correo)
+        public String bajaCliente (String correo)// usando Session["mail"]
         {
             String resp = "no se pudo eliminar ";
 
@@ -62,7 +62,7 @@ namespace ForeignersWeb
             if (c != null)
                 try
                 {
-                    string query = "DELETE FROM Cliente WHERE correo =" + correo;
+                    string query = "DELETE FROM Cliente WHERE correo = '" + correo+"'";
                    
                     int r = c.executeQuery(query);
                     if (r != 0)

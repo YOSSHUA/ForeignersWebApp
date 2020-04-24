@@ -27,6 +27,21 @@ namespace ForeignersWeb
             Response.Redirect("AltaRenta.aspx");
         }
 
+        protected void lkBtnAltaCliente_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AltaCliente.aspx");
+        }
+
+        protected void lkBajaAnuncio_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("BajaAnuncio.aspx");
+        }
+
+        protected void lkBajaCliente_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("BajaCliente.aspx");
+        }
+
         protected void lkBtnAltaEst_Click(object sender, EventArgs e)
         {
             Response.Redirect("AltaEstablecimiento.aspx");

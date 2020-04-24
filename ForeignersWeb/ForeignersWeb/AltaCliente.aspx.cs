@@ -15,9 +15,18 @@ namespace ForeignersWeb
 		}
 		protected void btAgregar_Click(object sender, EventArgs e)
 		{
-			Cliente c = new Cliente();
-			String resp = c.altaCliente(TextBox1Nombre.Text, TextBoxContra.Text, TextBox1Nombre.Text, txApePat.Text, TextBoxApeMat.Text, FechaNac.SelectedDate);
-			lblRespuesta.Text = resp;
+			if (TextBox1Nombre.Text == "" || txApePat.Text == "" || TextBoxApeMat.Text == "" || TextBoxCorreo.Text == "" || TextBoxContra.Text == "" || FechaNac.SelectedDate > DateTime.Now || FechaNac.SelectedDate== null)
+			{
+				Response.Write("<script>alert('Por favor rellena todas las casillas y selecciona tu fecha de nacimiento');</script>");
+
+
+			}
+			else
+			{
+				Cliente c = new Cliente();
+				String resp = c.altaCliente(TextBox1Nombre.Text, TextBoxContra.Text, TextBox1Nombre.Text, txApePat.Text, TextBoxApeMat.Text, FechaNac.SelectedDate);
+				lblRespuesta.Text = resp;
+			}
 
 		}
 	}
