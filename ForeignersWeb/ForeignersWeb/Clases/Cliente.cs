@@ -54,7 +54,7 @@ namespace ForeignersWeb
 
             return resp;
         }
-        public String bajaCliente (String correo)
+        public String bajaCliente (String correo)// usando Session["mail"]
         {
             String resp = "no se pudo eliminar ";
 
