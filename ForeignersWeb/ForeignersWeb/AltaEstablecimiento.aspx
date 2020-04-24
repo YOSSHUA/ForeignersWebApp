@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainMaster.Master" AutoEventWireup="true" CodeBehind="AltaEstablecimiento.aspx.cs" Inherits="ForeignersWeb.AltaEstablecimiento" %>
 
-<%@ Register Assembly="EO.Web" Namespace="EO.Web" TagPrefix="eo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -20,20 +19,18 @@
         <asp:TextBox ID="txtDesc" runat="server" MaxLength="290" Height="35px" TextMode="MultiLine" Width="213px"></asp:TextBox>
         
         <br />
-        <asp:Label ID="lblHa" runat="server" Text="Hora de apertura"></asp:Label>
+        <asp:Label ID="lblHa" runat="server" Text="Hora de apertura" format="HH:mm"></asp:Label>
+        &nbsp;&nbsp;&nbsp; <asp:TextBox runat="server" ID="txtHA" TextMode="Time"></asp:TextBox>
+        
+        
+        
+        &nbsp;<asp:Label ID="Label1" runat="server" Text="Hora de cierre" ></asp:Label>
         &nbsp;&nbsp;&nbsp;
-         <eo:DatePicker runat="server" PickerFormat="HH:mm" ID="tpHA" ClientIDMode="AutoID" DisabledDates="" SelectedDates="" PopupImageVisible="false">
-             <CalendarStyle CssText="" />
-        </eo:DatePicker>
-        
-        
-        &nbsp;<asp:Label ID="Label1" runat="server" Text="Hora de cierre"></asp:Label><eo:DatePicker runat="server" PickerFormat="HH:mm" ID="dpHC" PopupImageVisible="false">
-            <CalendarStyle CssText="" />
-        </eo:DatePicker>
+        <asp:TextBox runat="server" ID="txtHC" TextMode="Time" format="HH:mm"></asp:TextBox>
         
         <br />
         <asp:Label ID="lblRedS" runat="server" Text="Ingrese el link de su pagina de facebook"></asp:Label><br />
-        <asp:TextBox ID="txtRedS" runat="server" TextMode="Url"></asp:TextBox>
+        <asp:TextBox ID="txtRedS" runat="server" ></asp:TextBox>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         Tipo de establecimiento &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

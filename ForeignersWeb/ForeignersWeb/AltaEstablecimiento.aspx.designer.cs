@@ -69,13 +69,13 @@ namespace ForeignersWeb
         protected global::System.Web.UI.WebControls.Label lblHa;
 
         /// <summary>
-        /// tpHA control.
+        /// txtHA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EO.Web.DatePicker tpHA;
+        protected global::System.Web.UI.WebControls.TextBox txtHA;
 
         /// <summary>
         /// Label1 control.
@@ -87,13 +87,13 @@ namespace ForeignersWeb
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// dpHC control.
+        /// txtHC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EO.Web.DatePicker dpHC;
+        protected global::System.Web.UI.WebControls.TextBox txtHC;
 
         /// <summary>
         /// lblRedS control.

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainMaster.Master" AutoEventWireup="true" CodeBehind="AltaAnuncio.aspx.cs" Inherits="ForeignersWeb.AltaAnuncio" %>
 
-<%@ Register Assembly="EO.Web" Namespace="EO.Web" TagPrefix="eo" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -9,32 +9,8 @@
     <asp:Label ID="lblTit" runat="server" Text="Título del anuncio"></asp:Label><asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
     <br />
     <br />    
-    <asp:Label ID="Label1" runat="server" Text="Fecha de vigencia"></asp:Label> <eo:DatePicker ID="dtpFin" runat="server" ClientIDMode="AutoID" DisabledDates="" SelectedDates="" ControlSkinID="None" CssBlock="&lt;style type=&quot;text/css&quot;&gt;
-.dtpFin11 {background-color:white;border-bottom-color:#7f9db9;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#7f9db9;border-left-style:solid;border-left-width:1px;border-right-color:#7f9db9;border-right-style:solid;border-right-width:1px;border-top-color:#7f9db9;border-top-style:solid;border-top-width:1px;font-family:tahoma;font-size:9px;padding-bottom:4px;padding-left:4px;padding-right:4px;padding-top:4px}
-.dtpFin12 {border-bottom-color:#aca899;border-bottom-style:solid;border-bottom-width:1px;font-family:tahoma;font-size:12px}
-.dtpFin13 {border-bottom-color:white;border-bottom-style:solid;border-bottom-width:1px;border-left-color:white;border-left-style:solid;border-left-width:1px;border-right-color:white;border-right-style:solid;border-right-width:1px;border-top-color:white;border-top-style:solid;border-top-width:1px;font-family:tahoma;font-size:12px}
-.dtpFin14 {border-bottom-color:#fbe694;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#fbe694;border-left-style:solid;border-left-width:1px;border-right-color:#fbe694;border-right-style:solid;border-right-width:1px;border-top-color:#fbe694;border-top-style:solid;border-top-width:1px;font-family:tahoma;font-size:12px}
-.dtpFin15 {border-bottom-color:#bb5503;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#bb5503;border-left-style:solid;border-left-width:1px;border-right-color:#bb5503;border-right-style:solid;border-right-width:1px;border-top-color:#bb5503;border-top-style:solid;border-top-width:1px;font-family:tahoma;font-size:12px}
-.dtpFin16 {border-bottom-color:white;border-bottom-style:solid;border-bottom-width:1px;border-left-color:white;border-left-style:solid;border-left-width:1px;border-right-color:white;border-right-style:solid;border-right-width:1px;border-top-color:white;border-top-style:solid;border-top-width:1px;color:gray;font-family:tahoma;font-size:12px}
-.dtpFin17 {cursor:pointer;cursor:hand;font-family:tahoma;font-size:12px;margin-left:14px;margin-right:14px}
-.dtpFin18 {background-color:#fbe694;border-bottom-color:white;border-bottom-style:solid;border-bottom-width:1px;border-left-color:white;border-left-style:solid;border-left-width:1px;border-right-color:white;border-right-style:solid;border-right-width:1px;border-top-color:white;border-top-style:solid;border-top-width:1px;font-family:tahoma;font-size:12px}
-.dtpFin19 {cursor:pointer;cursor:hand}
-.dtpFin110 {background-color:#9ebef5;font-family:Tahoma;font-size:12px;padding-bottom:2px;padding-left:6px;padding-right:6px;padding-top:2px}
-&lt;/style&gt;"
-        DayCellHeight="16" DayCellWidth="19" DayHeaderFormat="FirstLetter" OtherMonthDayVisible="True" TitleLeftArrowImageUrl="DefaultSubMenuIconRTL" TitleRightArrowImageUrl="DefaultSubMenuIcon" VisibleDate="2020-04-01">
-        <PickerStyle CssText="font-family:Courier New; padding-left:5px; padding-right: 5px;" />
-        <CalendarStyle CssClass="dtpFin11" />
-        <TitleStyle CssClass="dtpFin110" />
-        <TitleArrowStyle CssClass="dtpFin19" />
-        <MonthStyle CssClass="dtpFin17" />
-        <DayHeaderStyle CssClass="dtpFin12" />
-        <DayStyle CssClass="dtpFin13" />
-        <DayHoverStyle CssClass="dtpFin14" />
-        <TodayStyle CssClass="dtpFin15" />
-        <SelectedDayStyle CssClass="dtpFin18" />
-        <DisabledDayStyle CssClass="dtpFin16" />
-        <OtherMonthDayStyle CssClass="dtpFin16" />
-    </eo:DatePicker>
+    <asp:Label ID="Label1" runat="server" Text="Fecha de vigencia"></asp:Label> 
+    <asp:Calendar runat="server" ID="dtpF" OnDayRender="dtpF_DayRender"></asp:Calendar>
     &nbsp;Tipo<br />
     <asp:RadioButtonList ID="rbList" ClientIDMode= "AutoID" runat="server" OnSelectedIndexChanged="rbList_SelectedIndexChanged" AutoPostBack="true">
         <asp:ListItem Text="Inmueble" Value="1" ></asp:ListItem>

@@ -16,8 +16,7 @@ namespace ForeignersWeb
                 Response.Redirect("Login.aspx");
             }
             if (!IsPostBack)
-            {                
-                dtpFin.MinValidDate = Convert.ToDateTime(DateTime.Today.ToString("dd/MM/yyyy"));
+            {                                
                 Session["_typeA"]= 3;
                 
             }
@@ -55,7 +54,7 @@ namespace ForeignersWeb
             {
                 int _typeA = Convert.ToInt32(Session["_typeA"]);
                 int selectedR = Convert.ToInt32(Session["selR"]);
-                if (txtDesc.Text == "" || txtTitle.Text == "" || dtpFin.SelectedDate.ToString() == "")
+                if (txtDesc.Text == "" || txtTitle.Text == "" || dtpF.SelectedDate.ToString() == "")
                 {
                     Response.Write("<script>alert('Llena todos los campos');</script>");
                     return;
@@ -64,15 +63,15 @@ namespace ForeignersWeb
                 Clases.Anuncio a = new Clases.Anuncio();
                 if (_typeA == 1)
                 { /// Renta                
-                    resp = a.altaAnuncio(_typeA, txtTitle.Text, dtpFin.SelectedDate, txtDesc.Text, Convert.ToInt32(HttpUtility.HtmlDecode(gvInm.Rows[selectedR].Cells[1].Text)), Convert.ToInt32(Session["idProp"]));
+                    resp = a.altaAnuncio(_typeA, txtTitle.Text, dtpF.SelectedDate.ToString("dd/MM/yyyy"), txtDesc.Text, Convert.ToInt32(HttpUtility.HtmlDecode(gvInm.Rows[selectedR].Cells[1].Text)), Convert.ToInt32(Session["idProp"]));
                 }
                 else if (_typeA == 2) // Establecimiento
                 {
-                    resp = a.altaAnuncio(_typeA, txtTitle.Text, dtpFin.SelectedDate, txtDesc.Text, Convert.ToInt32(HttpUtility.HtmlDecode(gvInm.Rows[selectedR].Cells[1].Text)), Convert.ToInt32(Session["idProp"]));
+                    resp = a.altaAnuncio(_typeA, txtTitle.Text, dtpF.SelectedDate.ToString("dd/MM/yyyy"), txtDesc.Text, Convert.ToInt32(HttpUtility.HtmlDecode(gvInm.Rows[selectedR].Cells[1].Text)), Convert.ToInt32(Session["idProp"]));
                 }
                 else//Otro
                 {
-                    resp = a.altaAnuncio(_typeA, txtTitle.Text, dtpFin.SelectedDate, txtDesc.Text, 0, Convert.ToInt32(Session["idProp"]));
+                    resp = a.altaAnuncio(_typeA, txtTitle.Text, dtpF.SelectedDate.ToString("dd/MM/yyyy"), txtDesc.Text, 0, Convert.ToInt32(Session["idProp"]));
                 }
                 if (resp > 0)
                 {
@@ -107,6 +106,14 @@ namespace ForeignersWeb
             else{
                 rowInm.Enabled = false;
                 rowEst.Enabled = false;
+            }
+        }
+
+        protected void dtpF_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if(e.Day.Date <= DateTime.Today)
+            {
+                e.Day.IsSelectable = false;
             }
         }
     }
