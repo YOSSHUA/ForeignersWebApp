@@ -12,6 +12,9 @@
     &nbsp;
 
     <asp:LinkButton ID="lkBtnAltaRenta" runat="server" OnClick="lkBtnAltaRenta_Click">Alta de inmueble en renta</asp:LinkButton>
+    &nbsp;
     <asp:LinkButton ID="lkBtnAltaEst" runat="server" OnClick="lkBtnAltaEst_Click">Alta de establecimiento</asp:LinkButton>
+    &nbsp;&nbsp;<asp:LinkButton ID="lkBtnModiEstab" runat="server" OnClick="lkBtnModiEstab_Click">Modificar Establecimientos</asp:LinkButton>
+    &nbsp;
     <asp:LinkButton ID="lkBtnAltaAnuncio" runat="server" OnClick="lkBtnAltaAnuncio_Click">Alta de anuncio</asp:LinkButton>
 </asp:Content>

@@ -139,6 +139,7 @@
     <Content Include="IndexClient.aspx" />
     <Content Include="IndexStudent.aspx" />
     <Content Include="Mapa.aspx" />
+    <Content Include="ModificarEstable.aspx" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -404,6 +405,13 @@
     </Compile>
     <Compile Include="Mapa.aspx.designer.cs">
       <DependentUpon>Mapa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarEstable.aspx.cs">
+      <DependentUpon>ModificarEstable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarEstable.aspx.designer.cs">
+      <DependentUpon>ModificarEstable.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainMaster.Master.cs">
