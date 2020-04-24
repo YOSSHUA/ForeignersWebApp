@@ -20,6 +20,13 @@ namespace ForeignersWeb
         protected string _lng = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["mail"] == null)
+            {
+                Response.Write("<script>alert('Hubo un error');</script>");
+                Session["type"] = null;
+                Session["mail"] = null;
+                Response.Redirect("Login.aspx");
+            }
             if (!IsPostBack)
             { 
                 Conexion con = new Conexion();
@@ -42,6 +49,11 @@ namespace ForeignersWeb
         {
             
             Renta r = new Renta();
+            if (Request.Files.Count == 0 || txtCalle.Text == "" || txtColDel.Text == "" || txtCP.Text == "" || txtDesc.Text == "" || txtEdo.Text == "" || txtNumH.Text == "" || txtPrecio.Text == "" || txtTel.Text=="")
+            {
+                Response.Write("<script>alert('Llenar todos los campos');</script>");
+                return;
+            }
             bool cocina = ddlCocina.SelectedValue == "1" ? true : false;
             int res = r.altaRenta(idProp_, txtDesc.Text, Convert.ToDouble(txtPrecio.Text), Convert.ToInt32(txtNumH.Text), cocina, txtTel.Text, txtCalle.Text, txtColDel.Text, txtCP.Text, txtEdo.Text, Convert.ToInt32(ddlPais.SelectedValue), lblLat.Text,lblLng.Text);
             if (res > 0)

@@ -67,6 +67,42 @@ namespace ForeignersWeb
             return resp;
         }
 
+        public int addEstablecimiento(int claveCliente,int tipo, string nombre, string des, byte[] pic, DateTime horaA, DateTime horaC, string redSocial, string calleNum, string munDel, string codP, string estado, string lng, string lat,int pais)
+        {
+            int resp;
+            try
+            {
+                SqlConnection con;
+                con = getConnection();
+                
+                    
+                SqlCommand cmd = new SqlCommand("Insert into Establecimiento( tipo, idPropietario, nombre, descripcion, foto, horaA, horaC, redSocial, calleNum, munDel, codP," +
+                    "estado, idPais, lng, lat) Values(@tipo, @idPropietario, @nombre, @descripcion, @foto, @horaA, @horaC, @redSocial, @calleNum, @munDel, @codP,"
+                    + "@estado, @idPais, @lng, @lat)", con);
+                cmd.Parameters.AddWithValue("@tipo", tipo);
+                cmd.Parameters.AddWithValue("@idPropietario", claveCliente);
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+                cmd.Parameters.AddWithValue("@descripcion", des);
+                cmd.Parameters.AddWithValue("@foto", pic);
+                cmd.Parameters.AddWithValue("@horaA", horaA.ToString("HH:mm:ss"));
+                cmd.Parameters.AddWithValue("@horaC", horaC.ToString("HH:mm:ss"));
+                cmd.Parameters.AddWithValue("@redSocial", redSocial);
+                cmd.Parameters.AddWithValue("@calleNum", calleNum);
+                cmd.Parameters.AddWithValue("@munDel", munDel);
+                cmd.Parameters.AddWithValue("@codP", codP);
+                cmd.Parameters.AddWithValue("@estado", estado);
+                cmd.Parameters.AddWithValue("@idPais", pais);
+                cmd.Parameters.AddWithValue("@lng", lng);
+                cmd.Parameters.AddWithValue("@lat", lat);
+                resp = cmd.ExecuteNonQuery();                
+            }
+            catch (Exception ex)
+            {                
+                resp = -1;
+            }
+            return resp;
+        }
+
         public int addImageInm(int idInm, byte[] foto)
         {
             int res = -1;

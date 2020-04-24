@@ -29,5 +29,11 @@ namespace ForeignersWeb
             DataTable resp = c.llenarDataTable(query);
             return resp;
         }
+        public int insertarEstablecimiento(int idProp,int tipo, String nombre, String des, byte[] pic, DateTime horaA, DateTime horaC, String redSocial, String calleNum, String munDel, String codP, String estado, string lng, string lat,  int pais)
+        {
+            Conexion c = new Conexion();
+            int resp = c.addEstablecimiento(idProp,tipo, nombre, des, pic, horaA, horaC, redSocial, calleNum, munDel, codP, estado, lng, lat, pais);
+            return resp;
+        }
     }
 }
