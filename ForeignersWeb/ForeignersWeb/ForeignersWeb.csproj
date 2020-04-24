@@ -48,9 +48,43 @@
     <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <HintPath>..\packages\AjaxControlToolkit.19.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="EO.Base, Version=20.0.81.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Pdf">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Pdf.Mvc">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.Pdf.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Pdf.WinForm">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.Pdf.WinForm.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Pdf.Wpf">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.Pdf.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="EO.Web, Version=20.0.81.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Web.Design">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser.WinForm">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.WebBrowser.WinForm.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser.Wpf">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.WebBrowser.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebEngine">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.WebEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Wpf">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Essential Objects\EO.Total 2020\EO.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMaps.LocationServices, Version=1.2.0.5, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GoogleMaps.LocationServices.1.2.0.5\lib\netstandard2.0\GoogleMaps.LocationServices.dll</HintPath>

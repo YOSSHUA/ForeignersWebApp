@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainMaster.Master" AutoEventWireup="true" CodeBehind="AltaAnuncio.aspx.cs" Inherits="ForeignersWeb.AltaAnuncio" %>
-<%@ Register assembly="EO.Web" namespace="EO.Web" tagprefix="eo" %>
+
+<%@ Register Assembly="EO.Web" Namespace="EO.Web" TagPrefix="eo" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <asp:Label ID="lblTit" runat="server" Text="Título del anuncio"></asp:Label><asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
     <br />
-    <br />
-
+    <br />    
     <asp:Label ID="Label1" runat="server" Text="Fecha de vigencia"></asp:Label> <eo:DatePicker ID="dtpFin" runat="server" ClientIDMode="AutoID" DisabledDates="" SelectedDates="" ControlSkinID="None" CssBlock="&lt;style type=&quot;text/css&quot;&gt;
 .dtpFin11 {background-color:white;border-bottom-color:#7f9db9;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#7f9db9;border-left-style:solid;border-left-width:1px;border-right-color:#7f9db9;border-right-style:solid;border-right-width:1px;border-top-color:#7f9db9;border-top-style:solid;border-top-width:1px;font-family:tahoma;font-size:9px;padding-bottom:4px;padding-left:4px;padding-right:4px;padding-top:4px}
 .dtpFin12 {border-bottom-color:#aca899;border-bottom-style:solid;border-bottom-width:1px;font-family:tahoma;font-size:12px}
