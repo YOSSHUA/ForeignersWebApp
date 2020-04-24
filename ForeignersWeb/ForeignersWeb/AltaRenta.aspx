@@ -16,14 +16,14 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblPrice" runat="server" Text="Precio"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtPrecio" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtPrecio" runat="server" TextMode="Number"></asp:TextBox>
         <br />
         <asp:Label ID="lblNH" runat="server" Text="No. de habitaciones"></asp:Label>
         &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtNumH" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtNumH" runat="server" TextMode="Number"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblTel" runat="server" Text="Telefono"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtTel" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtTel" runat="server" TextMode="Phone"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         Cocina incluida&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -48,7 +48,7 @@
         &nbsp;&nbsp;<br />
         <asp:Label ID="lblCp" runat="server" Text="Codigo postal"></asp:Label>
         &nbsp;&nbsp;&nbsp;        
-        <asp:TextBox ID="txtCP" runat="server" />
+        <asp:TextBox ID="txtCP" runat="server" TextMode="Number"/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblEstado" runat="server" Text="Estado"></asp:Label>
         <asp:TextBox ID="txtEdo" runat="server" />

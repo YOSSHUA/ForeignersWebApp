@@ -345,6 +345,7 @@
       <DependentUpon>BajaCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\Alumno.cs" />
+    <Compile Include="Clases\Anuncio.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="DB\Conexion.cs" />
     <Compile Include="Clases\Establecimiento.cs" />

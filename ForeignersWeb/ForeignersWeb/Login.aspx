@@ -9,11 +9,12 @@
         <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
         <br />
         <asp:Label runat="server" Text="Contraseña"></asp:Label>
-        <asp:TextBox ID="txtPass" runat="server"></asp:TextBox> 
+        <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox> 
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnInit" runat="server" Text="Iniciar sesión" OnClick="btnInit_Click" />
+        <br />        
     </div>
     
 </asp:Content>

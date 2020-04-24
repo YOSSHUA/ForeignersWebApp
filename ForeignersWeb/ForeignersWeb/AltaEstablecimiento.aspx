@@ -22,18 +22,18 @@
         <br />
         <asp:Label ID="lblHa" runat="server" Text="Hora de apertura"></asp:Label>
         &nbsp;&nbsp;&nbsp;
-         <eo:DatePicker runat="server" PickerFormat="HH:mm" ID="tpHA" >
+         <eo:DatePicker runat="server" PickerFormat="HH:mm" ID="tpHA" ClientIDMode="AutoID" DisabledDates="" SelectedDates="" PopupImageVisible="false">
              <CalendarStyle CssText="" />
         </eo:DatePicker>
         
         
-        &nbsp;<asp:Label ID="Label1" runat="server" Text="Hora de cierre"></asp:Label><eo:DatePicker runat="server" PickerFormat="HH:mm" ID="dpHC">
+        &nbsp;<asp:Label ID="Label1" runat="server" Text="Hora de cierre"></asp:Label><eo:DatePicker runat="server" PickerFormat="HH:mm" ID="dpHC" PopupImageVisible="false">
             <CalendarStyle CssText="" />
         </eo:DatePicker>
         
         <br />
         <asp:Label ID="lblRedS" runat="server" Text="Ingrese el link de su pagina de facebook"></asp:Label><br />
-        <asp:TextBox ID="txtRedS" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtRedS" runat="server" TextMode="Url"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         Tipo de establecimiento &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -56,7 +56,7 @@
         &nbsp;&nbsp;<br />
         <asp:Label ID="lblCp" runat="server" Text="Codigo postal"></asp:Label>
         &nbsp;&nbsp;&nbsp;        
-        <asp:TextBox ID="txtCP" runat="server" />
+        <asp:TextBox ID="txtCP" runat="server" TextMode="Number"/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblEstado" runat="server" Text="Estado"></asp:Label>
         <asp:TextBox ID="txtEdo" runat="server" />

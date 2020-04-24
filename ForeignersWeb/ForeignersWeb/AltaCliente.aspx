@@ -23,7 +23,7 @@
     <p>
         <asp:Label ID="lblCorreo" runat="server" Text="Correo"></asp:Label>
         &nbsp;
-        <asp:TextBox ID="TextBoxCorreo" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBoxCorreo" runat="server" TextMode="Email"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="lblContra" runat="server" Text="Contraseña"></asp:Label>
