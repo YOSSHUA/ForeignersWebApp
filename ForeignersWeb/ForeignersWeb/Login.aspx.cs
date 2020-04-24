@@ -23,14 +23,34 @@ namespace ForeignersWeb
             else
             {
                 Conexion c = new Conexion();
-                int result = c.login(txtUser.Text, txtPass.Text);
+                int result = c.login(txtUser.Text, txtPass.Text); /// 1 si es cliente y 2 si es alumno
                 if (result == 0)
                     Response.Write("<script>alert('" + "Datos incorrecto" + "');</script>");
                 else
                 {
                     Session["type"] = result;
-                    Session["mail"] = txtUser.Text;
-                    Response.Redirect("Index.aspx");
+                    if (result == 1)// Cliente
+                    {
+                        Cliente clt = new Cliente();
+                        int idProp_ = clt.getId(txtUser.Text);
+                        if (idProp_ == -1)
+                        {
+                            Response.Write("<script>alert('Hubo un error');</script>");
+                            Session["type"] = null;
+                            Response.Redirect("Login.aspx");
+                        }
+                        else
+                        {
+                            Session["idProp"] = idProp_;
+                            Response.Redirect("IndexClient.aspx");
+                        }
+                    }
+                    else // Alumno
+                    {
+                        Session["mail"] = txtUser.Text;
+                        Response.Redirect("IndexStudent.aspx");
+                    }
+                    
                 }
 
             }

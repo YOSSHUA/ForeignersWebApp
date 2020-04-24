@@ -15,9 +15,11 @@ namespace ForeignersWeb
         protected int _mapZoomLevel = 5;
         protected void Page_Load(object sender, EventArgs e)
         {
+            ScriptManager.RegisterStartupScript(this, Page.GetType(), "ClientScript", "initMap()", true);
             _centerMap = "19.345442, -99.200090";
             Locations l = new Locations();
             _markers = l.getLocations();
+            
         }
        
         
