@@ -122,11 +122,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AltaAlumno.aspx" />
     <Content Include="AltaAnuncio.aspx" />
     <Content Include="AltaCliente.aspx" />
     <Content Include="AltaEstablecimiento.aspx" />
     <Content Include="AltaRenta.aspx" />
     <Content Include="AltaRenta2.aspx" />
+    <Content Include="BajaAlumno.aspx" />
     <Content Include="BajaAnuncio.aspx" />
     <Content Include="BajaCliente.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -173,7 +175,7 @@
     <Content Include="Inicio.aspx" />
     <Content Include="Mapa.aspx" />
     <Content Include="ModificarEstable.aspx" />
-    <Content Include="ModificaAluno.aspx" />
+    <Content Include="ModificaAlumno.aspx" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -369,6 +371,13 @@
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaAlumno.aspx.cs">
+      <DependentUpon>AltaAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaAlumno.aspx.designer.cs">
+      <DependentUpon>AltaAlumno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AltaAnuncio.aspx.cs">
       <DependentUpon>AltaAnuncio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -403,6 +412,13 @@
     </Compile>
     <Compile Include="AltaRenta2.aspx.designer.cs">
       <DependentUpon>AltaRenta2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BajaAlumno.aspx.cs">
+      <DependentUpon>BajaAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BajaAlumno.aspx.designer.cs">
+      <DependentUpon>BajaAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="BajaAnuncio.aspx.cs">
       <DependentUpon>BajaAnuncio.aspx</DependentUpon>
@@ -459,12 +475,12 @@
     <Compile Include="ModificarEstable.aspx.designer.cs">
       <DependentUpon>ModificarEstable.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ModificaAluno.aspx.cs">
-      <DependentUpon>ModificaAluno.aspx</DependentUpon>
+    <Compile Include="ModificaAlumno.aspx.cs">
+      <DependentUpon>ModificaAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ModificaAluno.aspx.designer.cs">
-      <DependentUpon>ModificaAluno.aspx</DependentUpon>
+    <Compile Include="ModificaAlumno.aspx.designer.cs">
+      <DependentUpon>ModificaAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainMaster.Master.cs">

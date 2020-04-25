@@ -24,7 +24,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnInit" runat="server" Text="INGRESAR" OnClick="btnInit_Click" />
         <br />        
- 
+ </div>
   <div class="clear"></div>
   </section>
   <h2>&nbsp;</h2>
@@ -34,9 +34,7 @@
             &nbsp;</div>
           <div class="block clear">
           </div>
-          <div>
-          </div>
-        </>
+                 
       </div>
 
 </asp:Content>

@@ -40,16 +40,15 @@ Licence URI: http://www.os-templates.com/template-terms
         <ul class="clear">
           <li><asp:HyperLink ID="Link1" runat="server" NavigateUrl="~/Login.aspx" Text="Inicia sesión"></asp:HyperLink></li>
            <li><a class="drop" href="#">Registrate</a>
-            <ul>
-              <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AltaCliente.aspx" Text="Alumno"></asp:Hyperlink></li>
+            <ul>              
+              <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AltaAlumno.aspx" Text="Alumno" ></asp:Hyperlink></li>
               <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AltaCliente.aspx" Text="Cliente"></asp:Hyperlink></li>
             </ul>
           </li>
             <li><a class="drop" href="#">ALUMNO</a>
             <ul>
-              <li><asp:HyperLink ID="Link3" runat="server" NavigateUrl="~/BajaCliente.aspx" Text="Baja alumno"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/" Text="Modifica Universidad"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/" Text="Modifica foto"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="Link3" runat="server" NavigateUrl="~/BajaAlumno.aspx" Text="Baja alumno"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/ModificaAlumno.aspx" Text="Modificar datos"></asp:Hyperlink></li>
             </ul>
           </li>
           <li><a class="drop" href="#">CLIENTE</a>
