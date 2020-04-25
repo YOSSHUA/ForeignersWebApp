@@ -46,23 +46,28 @@ namespace ForeignersWeb
             }
             else
             {
-                Conexion c = new Conexion();
-                if (c != null)
-                    try
-                    {
-                        String f = String.Format("{0:MM/dd/yy}", DateTime.Today.AddDays(-1));
+                if (txAnuncio.Text == "")
+                    Response.Write("<script>alert('No has escogido el id del Anuncio que deseas eliminar, asegúrate de llenar esa casilla');</script>");
+                else
+                {
+                    Conexion c = new Conexion();
+                    if (c != null)
+                        try
+                        {
+                            String f = String.Format("{0:MM/dd/yy}", DateTime.Today.AddDays(-1));
 
-                        String query = "update RegAnuncio set fechaVig= '" + f + "' where idAnuncio = '" + txAnuncio.Text + "'";
-                        int res = c.executeQuery(query);
+                            String query = "update RegAnuncio set fechaVig= '" + f + "' where idAnuncio = '" + txAnuncio.Text + "'";
+                            int res = c.executeQuery(query);
 
-                        if (res != 0)
-                            Response.Write("<script>alert('Se dio de baja');</script>");
+                            if (res != 0)
+                                Response.Write("<script>alert('Se dio de baja');</script>");
 
-                    }
-                    catch (Exception err)
-                    {
-                        Response.Write("<script>alert('No se pudo dar de baja por el error ');</script>" + err);
-                    }
+                        }
+                        catch (Exception err)
+                        {
+                            Response.Write("<script>alert('No se pudo dar de baja por el error ');</script>" + err);
+                        }
+                }
             }
         }
     }

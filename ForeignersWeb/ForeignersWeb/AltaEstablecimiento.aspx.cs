@@ -38,7 +38,7 @@ namespace ForeignersWeb
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-            if (Request.Files.Count == 0 || txtCalle.Text=="" || txtColDel.Text=="" || txtCP.Text=="" || txtDesc.Text=="" || txtEdo.Text=="" || txtNom.Text=="" || txtRedS.Text=="")
+            if (Request.Files.Count == 0 || txtCalle.Text=="" || txtColDel.Text=="" || txtCP.Text=="" || txtDesc.Text=="" || txtEdo.Text=="" || txtNom.Text=="")
             {
                 Response.Write("<script>alert('Llenar todos los campos');</script>");
                 return;
@@ -57,7 +57,7 @@ namespace ForeignersWeb
                         byte[] imgarray = new byte[imagefilelenth];
                         HttpPostedFile image = PostedFile;
                         image.InputStream.Read(imgarray, 0, imagefilelenth);
-                        int res = est.insertarEstablecimiento(idProp_, Convert.ToInt32(ddlTipoEst.SelectedValue), txtNom.Text, txtDesc.Text, imgarray, tpHA.SelectedDate, dpHC.SelectedDate, txtRedS.Text, txtCalle.Text, txtColDel.Text, txtCP.Text, txtEdo.Text, lblLat.Text, lblLng.Text, Convert.ToInt32(ddlPais.SelectedValue));
+                        int res = est.insertarEstablecimiento(idProp_, Convert.ToInt32(ddlTipoEst.SelectedValue), txtNom.Text, txtDesc.Text, imgarray, txtHA.Text, txtHC.Text, txtRedS.Text, txtCalle.Text, txtColDel.Text, txtCP.Text, txtEdo.Text, lblLat.Text, lblLng.Text, Convert.ToInt32(ddlPais.SelectedValue));
                         if (res > 0)
                         {
                             Response.Write("<script>alert('Se registro correctamente su establecimiento');</script>");

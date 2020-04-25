@@ -67,7 +67,7 @@ namespace ForeignersWeb
             return resp;
         }
 
-        public int addEstablecimiento(int claveCliente,int tipo, string nombre, string des, byte[] pic, DateTime horaA, DateTime horaC, string redSocial, string calleNum, string munDel, string codP, string estado, string lng, string lat,int pais)
+        public int addEstablecimiento(int claveCliente,int tipo, string nombre, string des, byte[] pic, string horaA, string horaC, string redSocial, string calleNum, string munDel, string codP, string estado, string lng, string lat,int pais)
         {
             int resp;
             try
@@ -84,8 +84,8 @@ namespace ForeignersWeb
                 cmd.Parameters.AddWithValue("@nombre", nombre);
                 cmd.Parameters.AddWithValue("@descripcion", des);
                 cmd.Parameters.AddWithValue("@foto", pic);
-                cmd.Parameters.AddWithValue("@horaA", horaA.ToString("HH:mm:ss"));
-                cmd.Parameters.AddWithValue("@horaC", horaC.ToString("HH:mm:ss"));
+                cmd.Parameters.AddWithValue("@horaA", horaA);
+                cmd.Parameters.AddWithValue("@horaC", horaC);
                 cmd.Parameters.AddWithValue("@redSocial", redSocial);
                 cmd.Parameters.AddWithValue("@calleNum", calleNum);
                 cmd.Parameters.AddWithValue("@munDel", munDel);

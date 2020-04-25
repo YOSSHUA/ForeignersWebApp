@@ -51,5 +51,11 @@ namespace ForeignersWeb
         {
             Response.Redirect("AltaAnuncio.aspx");
         }
+
+        protected void lkBtnModiEstab_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ModificarEstable.aspx");
+
+        }
     }
 }
