@@ -29,5 +29,10 @@ namespace ForeignersWeb
 			}
 
 		}
+
+		protected void FechaNac_SelectionChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
