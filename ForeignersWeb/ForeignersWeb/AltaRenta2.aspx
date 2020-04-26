@@ -2,6 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
+<div class="wrapper row2">
+    <section class="hoc container clear"> 
+   
+    <div class="sectiontitle>
+    <h6 class="heading">Renta</h6> 
+    </div>
+        <h2 style="">Da click para agregar archivos</h2>
+    <div style="align-content: center">
     <script type="text/javascript">
 
         var counter = 0;
@@ -37,9 +45,9 @@
     </script>
     
     <div >
-        <span style="font-family: Arial">Click to add files</span>&nbsp;&nbsp;
+        <span style="font-family: Arial">Agregar archivos</span>&nbsp;&nbsp;
 
-        <input id="Button1" type="button" value="add" onclick="AddFileUpload()" />
+        <input id="Button1" type="button" value="AGREGAR" onclick="AddFileUpload()" />
 
         <br />
         <br />
@@ -52,8 +60,13 @@
 
         <br />
 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
         <asp:Button ID="btnUpload" runat="server"
-            Text="Upload" OnClick="btnUpload_Click" />
+            Text="SUBIR" OnClick="btnUpload_Click" />
         <br />
     </div>
+    </div>   
+  </section>
+ </div>
 </asp:Content>

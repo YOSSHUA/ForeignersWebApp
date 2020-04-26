@@ -2,40 +2,57 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="wrapper row2">
+    <section class="hoc container clear"> 
+   
+    <div class="sectiontitle>
+    <h6 class="heading">Registrate</h6> 
+    </div>
+        <h2 style="">Ingresa tus datos aquí</h2>
+    <div style="align-content: center">
     <asp:Label ID="Label10" runat="server" Text="Alta Alumno"></asp:Label>
      <br />
      <br />
-    <asp:Label ID="Label1" runat="server" Text="correo"></asp:Label>      
-    <asp:TextBox ID="tbCorreo" runat="server"></asp:TextBox>
-    <br />
+    <asp:Label ID="Label1" runat="server" Text="Correo  "></asp:Label>      
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+    <asp:TextBox ID="tbCorreo" runat="server" ForeColor="Black"></asp:TextBox>
     <br />
     <asp:Label ID="Label2" runat="server" Text="Contraseña"></asp:Label> 
-    <asp:TextBox ID="tbContra" runat="server"></asp:TextBox>
-    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <asp:TextBox ID="tbContra" runat="server" ForeColor="Black"></asp:TextBox>
     <br />
     <asp:Label ID="Label3" runat="server" Text="Nombre"></asp:Label>
-    <asp:TextBox ID="tbNombre" runat="server"></asp:TextBox>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:TextBox ID="tbNombre" runat="server" ForeColor="Black"></asp:TextBox>
     <br />
     <asp:Label ID="Label4" runat="server" Text="Apellido Paterno"></asp:Label>
-    <asp:TextBox ID="tbApellidoP" runat="server"></asp:TextBox>
+    &nbsp;&nbsp;
+    <asp:TextBox ID="tbApellidoP" runat="server" ForeColor="Black"></asp:TextBox>
     <br />
     <asp:Label ID="Label5" runat="server" Text="Apellido Materno"></asp:Label>
-    <asp:TextBox ID="tbApellidoM" runat="server"></asp:TextBox>
+    &nbsp;
+    <asp:TextBox ID="tbApellidoM" runat="server" ForeColor="Black"></asp:TextBox>
     <br />
     <asp:Label ID="Label6" runat="server" Text="Fecha Nacimiento"></asp:Label>
-    <asp:TextBox ID="tbFechaNac" runat="server"></asp:TextBox>
-    <br />
+    &nbsp;
+    <asp:TextBox ID="tbFechaNac" runat="server" ForeColor="Black"></asp:TextBox>
     <br />
    
-    <asp:Label ID="Label8" runat="server" Text="sexo"></asp:Label>
-    <asp:TextBox ID="tbSexo" runat="server"></asp:TextBox>
-    <br />
+    <asp:Label ID="Label8" runat="server" Text="Sexo"></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:TextBox ID="tbSexo" runat="server" ForeColor="Black"></asp:TextBox>
     <br />
     <asp:Label ID="Label9" runat="server" Text="Universidad"></asp:Label>
-    <asp:DropDownList ID="ddlUni" runat="server" OnSelectedIndexChanged="ddlUni_SelectedIndexChanged"></asp:DropDownList>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:DropDownList ID="ddlUni" runat="server" OnSelectedIndexChanged="ddlUni_SelectedIndexChanged" Height="16px" Width="127px" ForeColor="Black"></asp:DropDownList>
     <br />
     <br />
-    <asp:Button ID="Button1" runat="server" Text="Registrar" OnClick="Button1_Click1" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="Button1" runat="server" Text="REGISTRARSE" OnClick="Button1_Click1" />
+        <br />
      <br />
     <asp:Label ID="lbResult" runat="server" Text=""></asp:Label>
+        </div>
+  </section>
+</div>
 </asp:Content>

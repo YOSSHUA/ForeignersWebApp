@@ -11,7 +11,10 @@ namespace ForeignersWeb
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
+			if (Session["type"] == null || Session["idProp"] == null)
+			{
+				Response.Redirect("Login.aspx");
+			}
 		}
 		protected void btAgregar_Click(object sender, EventArgs e)
 		{
@@ -29,5 +32,7 @@ namespace ForeignersWeb
 			}
 
 		}
+
+		
 	}
 }
