@@ -62,6 +62,9 @@ namespace ForeignersWeb
             {
                 try
                 {
+                    String correo = Session["mail"].ToString();
+                    String contra = Session["contra"].ToString();
+
                     if (Request.Files.Count > 0)
                     {
                         HttpPostedFile PostedFile = Request.Files[0];
@@ -73,7 +76,7 @@ namespace ForeignersWeb
                             byte[] imgarray = new byte[imagefilelenth];
                             HttpPostedFile image = PostedFile;
                             image.InputStream.Read(imgarray, 0, imagefilelenth);
-                            string query = "UPDATE foto FROM Alumno SET foto='" + imgarray + " WHERE Alumno.correo='" + tbCorreo.Text + "AND Alumno.contra='" + tbContra.Text + "'";
+                            string query = "UPDATE foto FROM Alumno SET foto='" + imgarray + " WHERE Alumno.correo='" + correo + "AND Alumno.contra='" + contra + "'";
                             SqlCommand sql2 = new SqlCommand(query, miConexion);
                             int res = sql2.ExecuteNonQuery();
                             if (res > 0)
@@ -102,8 +105,10 @@ namespace ForeignersWeb
             {
                 try
                 {
-                   
-                    String query1 = "UPDATE idUni FROM alumno SET idUni='" + ddlUni.SelectedIndex + "where correo ='" + tbCorreo.Text + "AND contra='" + tbContra.Text + "' ";
+                     
+                    String correo = Session["mail"].ToString();
+                    String contra = Session["contra"].ToString();
+                    String query1 = "UPDATE idUni FROM alumno SET idUni='" + ddlUni.SelectedIndex + "where correo ='" + correo + "AND contra='" + contra + "' ";
                     SqlCommand sql2 = new SqlCommand(query1, miConexion);
                     int res = sql2.ExecuteNonQuery();
                     if (res != 0)
@@ -116,8 +121,6 @@ namespace ForeignersWeb
                 {
                     lbResult.Text = "no se modificó correctamente";
                 }
-
-
             }
         }
 

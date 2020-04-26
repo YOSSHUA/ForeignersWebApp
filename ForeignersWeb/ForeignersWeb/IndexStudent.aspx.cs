@@ -13,5 +13,20 @@ namespace ForeignersWeb
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

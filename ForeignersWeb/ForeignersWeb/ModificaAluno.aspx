@@ -5,13 +5,6 @@
     <asp:Label ID="Label1" runat="server" Text="Modificaciones Alumno"></asp:Label>
     <br />
     <br />
-    <asp:Label ID="Label3" runat="server" Text="correo"></asp:Label>
-    <asp:TextBox ID="tbCorreo" runat="server"></asp:TextBox>
-    <br />
-    <asp:Label ID="Label4" runat="server" Text="Contra"></asp:Label>
-    <asp:TextBox ID="tbContra" runat="server"></asp:TextBox>
-    <br />
-    <br />
     <asp:Label ID="Label2" runat="server" Text="Cambiar Universidad"></asp:Label><br />
     <br />
     <asp:Label ID="Label5" runat="server" Text="Nueva Universidad"></asp:Label>
