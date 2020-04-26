@@ -54,7 +54,7 @@ namespace ForeignersWeb
 
             return resp;
         }
-        public String bajaCliente (String correo)// usando Session["mail"]
+        public String bajaCliente (int id)// usando Session["mail"]
         {
             String resp = "no se pudo eliminar ";
 
@@ -62,11 +62,37 @@ namespace ForeignersWeb
             if (c != null)
                 try
                 {
-                    string query = "DELETE FROM Cliente WHERE correo = '" + correo+"'";
+                    String query1= "delete from RegAnuncio where idCliente='" +id+ "'";
+                    int re = c.executeQuery(query1);
+
+                    
+
+                    string ids = "SELECT idInm FROM Inmueble WHERE idPropietario = "+id;
+                    SqlDataReader dr = c.getReader(ids);
+                    if(dr!= null)
+                    {
+                        while (dr.Read())
+                        {
+                            int idAct = dr.GetInt32(0);
+                            string aux = "delete from catFotosInm where idInm='" + idAct + "'";
+                            re = c.executeQuery(aux);
+                        }
+                    }
+                    else
+                    {
+                        return resp;
+                    }
+                    String query2 = "delete from Inmueble where idPropietario='" + id + "'";
+                    re = c.executeQuery(query2);
+
+                    String query3 = "delete from Establecimiento where idPropietario='" +id+ "'";
+                    re = c.executeQuery(query3);
+
+                    string query = "DELETE FROM Cliente WHERE idCliente = '" +id+"'";
                    
                     int r = c.executeQuery(query);
-                    if (r != 0)
-                        resp = "se elimino ";
+                    if (r > 0)
+                        resp = "se elimino";
                 }catch(Exception ex)
                 {
 
