@@ -12,32 +12,18 @@ namespace ForeignersWeb
 {
     public partial class ModificaAluno : System.Web.UI.Page
     {
-        protected SqlConnection conectarBD()
-        {
-            SqlConnection cnn;
-            try
-            {
-                cnn = new SqlConnection("Data Source=NOEMI-PC;Initial Catalog=BDForeigners;Integrated Security=True");
-                cnn.Open();
-
-            }
-            catch (Exception ex)
-            {
-                cnn = null;
-
-            }
-            return cnn;
-        }
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                SqlConnection miConexion = conectarBD();
+                Conexion c = new Conexion();
+                SqlConnection miConexion = c.getConnection();
                 if (miConexion != null)
                 {
                     try
                     {
-                        String query = "select * nombre from cat.Universidades";
+                        String query = "select nombre from catUniversidades";
                         SqlCommand sql = new SqlCommand(query, miConexion);
                         SqlDataReader reader = sql.ExecuteReader();
                         while (reader.Read())
@@ -57,13 +43,14 @@ namespace ForeignersWeb
 
         protected void Button1_Click(object sender, EventArgs e) //boton para guardar la foto
         {
-            SqlConnection miConexion = conectarBD();
+            Conexion c = new Conexion();
+            SqlConnection miConexion = c.getConnection();
             if (miConexion != null)
             {
                 try
                 {
                     String correo = Session["mail"].ToString();
-                    String contra = Session["contra"].ToString();
+                    
 
                     if (Request.Files.Count > 0)
                     {
@@ -76,7 +63,7 @@ namespace ForeignersWeb
                             byte[] imgarray = new byte[imagefilelenth];
                             HttpPostedFile image = PostedFile;
                             image.InputStream.Read(imgarray, 0, imagefilelenth);
-                            string query = "UPDATE foto FROM Alumno SET foto='" + imgarray + " WHERE Alumno.correo='" + correo + "AND Alumno.contra='" + contra + "'";
+                            string query = "UPDATE Alumno SET foto='" + imgarray + "' WHERE Alumno.correo='" + correo + "'";
                             SqlCommand sql2 = new SqlCommand(query, miConexion);
                             int res = sql2.ExecuteNonQuery();
                             if (res > 0)
@@ -100,15 +87,16 @@ namespace ForeignersWeb
 
         protected void Button2_Click(object sender, EventArgs e) //boton para modificar la uni
         {
-            SqlConnection miConexion = conectarBD();
+            Conexion c = new Conexion();
+            SqlConnection miConexion = c.getConnection();
             if (miConexion != null)
             {
                 try
                 {
                      
                     String correo = Session["mail"].ToString();
-                    String contra = Session["contra"].ToString();
-                    String query1 = "UPDATE idUni FROM alumno SET idUni='" + ddlUni.SelectedIndex + "where correo ='" + correo + "AND contra='" + contra + "' ";
+                    
+                    String query1 = "UPDATE Alumno SET idUni='" + (ddlUni.SelectedIndex+1) + "' where correo ='" + correo + "'";
                     SqlCommand sql2 = new SqlCommand(query1, miConexion);
                     int res = sql2.ExecuteNonQuery();
                     if (res != 0)

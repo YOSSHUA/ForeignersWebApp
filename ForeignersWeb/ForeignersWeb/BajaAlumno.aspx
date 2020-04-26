@@ -5,15 +5,12 @@
      <div class="wrapper row2">
     <section class="hoc container clear"> 
    
-    <div class="sectiontitle>
+    <div class="sectiontitle">
     <h6 class="heading">Baja alumno</h6> 
     </div>
         <h2 style="">No dejes de ser parte de nuestra familia, ¡te extrañaremos!</h2>
         <div style="align-content: center">
-    <asp:Label ID="Label2" runat="server" Text="Correo"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="tbCorreo2" runat="server" ForeColor="Black"></asp:TextBox>
-    <br />
     <br />
     <asp:Label ID="Label3" runat="server" Text="Contraseña"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

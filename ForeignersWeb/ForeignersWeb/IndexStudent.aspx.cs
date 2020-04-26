@@ -11,25 +11,22 @@ namespace ForeignersWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["type"] == null || Session["idProp"] == null)
+            if (Session["type"] == null || Session["mail"] == null)
             {
                 Response.Redirect("Login.aspx");
             }
         }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("");
-        }
+     
 
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("BajaAlumno.aspx");
         }
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ModificaAlumno.aspx");
         }
     }
 }
