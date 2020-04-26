@@ -60,7 +60,15 @@ namespace ForeignersWeb
                             int res = c.executeQuery(query);
 
                             if (res != 0)
+                            {
                                 Response.Write("<script>alert('Se dio de baja');</script>");
+
+                                String query2 = "Select idAnuncio, titulo as 'Título', fechaIni as 'Fecha de inicio', fechaVig as" +
+                                    "'Fecha de vigencia', descripcion as 'Descripción' from RegAnuncio where idCliente='" + _idProp + "'AND fechaVig> GETDATE()";
+                                int result = c.fillGrid(query2, gvRegAnuncios);
+                                if (result < 0)
+                                    Response.Write("<script>alert('Hubo un error al cargar los anuncios');</script>");
+                            }
 
                         }
                         catch (Exception err)
