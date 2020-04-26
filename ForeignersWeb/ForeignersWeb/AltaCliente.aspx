@@ -13,27 +13,27 @@
     <p>
         <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1Nombre" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox1Nombre" runat="server" ForeColor="Black"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="lblApePAt" runat="server" Text="Apellido Paterno"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txApePat" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txApePat" runat="server" ForeColor="Black"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="lblApeMat" runat="server" Text="Apellido Materno"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBoxApeMat" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBoxApeMat" runat="server" ForeColor="Black"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="lblCorreo" runat="server" Text="Correo"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBoxCorreo" runat="server" TextMode="Email"></asp:TextBox>
+        <asp:TextBox ID="TextBoxCorreo" runat="server" TextMode="Email" ForeColor="Black"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="lblContra" runat="server" Text="Contraseña"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBoxContra" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBoxContra" runat="server" ForeColor="Black"></asp:TextBox>
     </p>
     <p>
         <asp:Label ID="lblFechaN" runat="server" Text="Fecha de nacimiento"></asp:Label>
@@ -47,7 +47,7 @@
         &nbsp;
     </p>
     <p style="margin-left: 920px">
-        <asp:Button ID="btAgregar" runat="server" Text="AGREGAR" OnClick="btAgregar_Click" />
+        <asp:Button ID="btAgregar" runat="server" Text="REGISTRARSE" OnClick="btAgregar_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </p>
         <p>
@@ -56,7 +56,7 @@
     <p>
         &nbsp;
     </p>
-    <div class="clear"></div>
+     <div class="clear"></div>
   </section>
     </div>
    

@@ -174,6 +174,9 @@
     <Content Include="IndexStudent.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Mapa.aspx" />
+    <Content Include="ModificaAnuncio.aspx" />
+    <Content Include="ModificaCorreo.aspx" />
+    <Content Include="ModificaRenta.aspx" />
     <Content Include="ModificarEstable.aspx" />
     <Content Include="ModificaAlumno.aspx" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
@@ -467,6 +470,27 @@
     </Compile>
     <Compile Include="Mapa.aspx.designer.cs">
       <DependentUpon>Mapa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificaAnuncio.aspx.cs">
+      <DependentUpon>ModificaAnuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificaAnuncio.aspx.designer.cs">
+      <DependentUpon>ModificaAnuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificaCorreo.aspx.cs">
+      <DependentUpon>ModificaCorreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificaCorreo.aspx.designer.cs">
+      <DependentUpon>ModificaCorreo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificaRenta.aspx.cs">
+      <DependentUpon>ModificaRenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificaRenta.aspx.designer.cs">
+      <DependentUpon>ModificaRenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModificarEstable.aspx.cs">
       <DependentUpon>ModificarEstable.aspx</DependentUpon>

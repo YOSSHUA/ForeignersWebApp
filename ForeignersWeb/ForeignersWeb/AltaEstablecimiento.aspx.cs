@@ -111,5 +111,10 @@ namespace ForeignersWeb
                 Response.Write("<script>alert('Hubo un error al buscar la direccion, intente de nuevo');</script>");
             }
         }
+
+        protected void txtEdo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

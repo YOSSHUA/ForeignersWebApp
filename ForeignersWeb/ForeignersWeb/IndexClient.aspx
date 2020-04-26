@@ -2,19 +2,30 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <div class="wrapper row2">
+    <section class="hoc container clear"> 
+   
+    <div class="sectiontitle>
+    <h6 class="heading">Cliente</div>
+        
+    <div style="align-content: center">
     <asp:LinkButton ID="lkBtnMap" runat="server" OnClick="lkBtn_Click">Ver mapa</asp:LinkButton>
 
-    &nbsp;&nbsp;<asp:LinkButton ID="lkBtnAltaCliente" runat="server" OnClick="lkBtnAltaCliente_Click">Alta cliente</asp:LinkButton>
-    &nbsp;
-    <asp:LinkButton ID="lkBajaAnuncio" runat="server" OnClick="lkBajaAnuncio_Click">Baja anuncio</asp:LinkButton>
-    &nbsp;
-    <asp:LinkButton ID="lkBajaCliente" runat="server" OnClick="lkBajaCliente_Click">Baja cliente</asp:LinkButton>
-    &nbsp;
+    &nbsp;|&nbsp;<asp:LinkButton ID="lkBtnAltaAnuncio" runat="server" OnClick="lkBtnAltaAnuncio_Click">Alta anuncio</asp:LinkButton>
+        &nbsp;|
+    <asp:LinkButton ID="lkBtnAltaEst" runat="server" OnClick="lkBtnAltaEst_Click">Alta establecimiento</asp:LinkButton>
+    &nbsp;|
 
-    <asp:LinkButton ID="lkBtnAltaRenta" runat="server" OnClick="lkBtnAltaRenta_Click">Alta de inmueble en renta</asp:LinkButton>
-    &nbsp;
-    <asp:LinkButton ID="lkBtnAltaEst" runat="server" OnClick="lkBtnAltaEst_Click">Alta de establecimiento</asp:LinkButton>
-    &nbsp;&nbsp;<asp:LinkButton ID="lkBtnModiEstab" runat="server" OnClick="lkBtnModiEstab_Click">Modificar Establecimientos</asp:LinkButton>
-    &nbsp;
-    <asp:LinkButton ID="lkBtnAltaAnuncio" runat="server" OnClick="lkBtnAltaAnuncio_Click">Alta de anuncio</asp:LinkButton>
+    <asp:LinkButton ID="lkBtnAltaRenta" runat="server" OnClick="lkBtnAltaRenta_Click">Alta renta</asp:LinkButton>
+    &nbsp;|
+    <asp:LinkButton ID="lkBajaAnuncio" runat="server" OnClick="lkBajaAnuncio_Click">Baja anuncio</asp:LinkButton>
+    &nbsp;|
+    <asp:LinkButton ID="lkBajaCliente" runat="server" OnClick="lkBajaCliente_Click">Baja cliente</asp:LinkButton>
+    &nbsp;|&nbsp;<asp:LinkButton ID="lkBtnModiEstab" runat="server" OnClick="lkBtnModiEstab_Click">Modificar Estab</asp:LinkButton>
+    &nbsp;|
+        <asp:LinkButton ID="lkBtnModiAnun" runat="server" OnClick="lkBtnModiAnun_Click">Modificar renta</asp:LinkButton>
+    &nbsp;| <asp:LinkButton ID="lkBtnModiEstab0" runat="server" OnClick="lkBtnModiEstab_Click">Modificar correo</asp:LinkButton>
+    </div>
+  </section>
+</div>
 </asp:Content>

@@ -53,16 +53,17 @@ Licence URI: http://www.os-templates.com/template-terms
           </li>
           <li><a class="drop" href="#">CLIENTE</a>
             <ul>
-              <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/BajaCliente.aspx" Text="Baja cliente"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/AltaAnuncio.aspx" Text="Alta auncios"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AltaRenta.aspx" Text="Alta renta"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/BajaAnuncio.aspx" Text="Baja anuncio"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/" Text="Desactivar renta"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/" Text="Modificar anuncio"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/" Text="Modificar renta"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/" Text="Modificar correo"></asp:Hyperlink></li>
               
-              
+              <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/AltaAnuncio.aspx" Text="Alta anuncio"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AltaEstablecimiento.aspx" Text="Alta establecimiento"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/AltaRenta.aspx" Text="Alta de inmueble en renta"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/BajaAnuncio.aspx" Text="Baja anuncio"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/BajaCliente.aspx" Text="Baja cliente"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/ModificaEstable.aspx" Text="Modificar establecimientos"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/ModificaAnuncio.aspx" Text="Modificar anuncio"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/ModificaCorreo.apsx" Text="Modificar correo"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/ModificaRenta.aspx" Text="Modificar renta"></asp:Hyperlink></li>
+
             </ul>
           </li>
           <li><a href="Content\pages\sidebar-left.htmll">Contáctanos</a></li>

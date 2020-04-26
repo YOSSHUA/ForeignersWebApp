@@ -13,11 +13,11 @@
         <h2 style="">Ingresa tus datos aquí</h2>
     <div text-align: center;">
         <asp:Label runat="server" Text="Usuario *"></asp:Label>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
+        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtUser" runat="server" ForeColor="Black"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
         <asp:Label runat="server" Text="Contraseña *    "></asp:Label>
-        <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox> 
+        <asp:TextBox ID="txtPass" runat="server" TextMode="Password" ForeColor="Black"></asp:TextBox> 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
         <br />
         <br />
