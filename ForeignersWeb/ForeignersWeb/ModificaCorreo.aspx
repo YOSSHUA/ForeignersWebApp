@@ -10,14 +10,16 @@
     </div>
         <h2 style="">Cambia el correo que tienes registrado aquí</h2>
         <div style="align-content: center">
-    <asp:Label ID="Label3" runat="server" Text="Correo"></asp:Label>
+    <asp:ScriptManager runat="server" EnablePartialRendering="true"></asp:ScriptManager>
+
+    <asp:Label ID="Label3" runat="server" Text="Correo actual"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;
-    <asp:TextBox ID="tbCorreo" runat="server" ForeColor="Black"></asp:TextBox>
+    <asp:TextBox ID="tbCorreoActual" runat="server" ForeColor="Black"></asp:TextBox>
     <br />
-    <asp:Label ID="Label4" runat="server" Text="Contra"></asp:Label>
+    <asp:Label ID="Label4" runat="server" Text="Correo nuevo"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="tbContra" runat="server" ForeColor="Black"></asp:TextBox>
+    <asp:TextBox ID="tbCorreoNuevo" runat="server" ForeColor="Black"></asp:TextBox>
     <br />
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

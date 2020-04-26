@@ -116,5 +116,10 @@ namespace ForeignersWeb
                 e.Day.IsSelectable = false;
             }
         }
+
+        protected void dtpF_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

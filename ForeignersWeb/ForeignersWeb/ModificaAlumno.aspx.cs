@@ -17,7 +17,7 @@ namespace ForeignersWeb
             SqlConnection cnn;
             try
             {
-                cnn = new SqlConnection("Data Source=LAPTOP-U5UTRRH6;Initial Catalog=Foreigners;Integrated Security=True");
+                cnn = new SqlConnection("Data Source=NOEMI-PC;Initial Catalog=BDForeigners;Integrated Security=True");
                 cnn.Open();
 
             }

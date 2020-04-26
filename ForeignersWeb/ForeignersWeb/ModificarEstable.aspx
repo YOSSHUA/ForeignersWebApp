@@ -22,7 +22,7 @@
          </asp:GridView>
          <br />
          Id del establecimiento que desea modificar&nbsp;
-         <asp:TextBox ID="txtID" runat="server" Enabled="false" Font-Bold="true" ForeColor="Black"></asp:TextBox>
+         <asp:TextBox ID="txtID" runat="server" Enabled="false" Font-Bold="true" ForeColor="Black" OnTextChanged="txtID_TextChanged"></asp:TextBox>
          <br />
          <br />
          <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
@@ -89,12 +89,12 @@
     Seleccione una foto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:FileUpload runat="server" ID="fUp" Height="20px" Width="305px" ForeColor="Black" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnActFoto" runat="server" Text="ACTUALIZAR" OnClick="btnActFoto_Click" />
+        <asp:Button ID="btnActFoto" runat="server" Text="Actualizar foto" OnClick="btnActFoto_Click" />
          <br />    
         <br />
         <br />
 
-    </div>
+            </div>
         </div>
   </section>
 </div>

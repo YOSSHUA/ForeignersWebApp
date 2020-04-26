@@ -8,42 +8,33 @@
     <div class="sectiontitle>
     <h6 class="heading">Modifica anuncio</h6> 
     </div>
-        <h2 style="">Cambia datos de tus anuncios aquí</h2>
+        <h2 style="">Cambia la vigencia de tus anuncios aquí</h2>
         <div style="align-content: center">
-    <asp:Label ID="Label3" runat="server" Text="Correo"></asp:Label>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;
-    <asp:TextBox ID="tbCorreo" runat="server" ForeColor="Black"></asp:TextBox>
+    <asp:ScriptManager runat="server" EnablePartialRendering="true" ID="ScriptManager1"></asp:ScriptManager>
+    
+
+    <div id="divDatos" runat="server">
+
+         Primero debe escoger el id del anuncio que desea modificar. Estos son sus anuncios.<br />
+         <br />
+         <asp:GridView ID="gvAnun" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="btnSelectInm_Click">
+             <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+         </asp:GridView>
+
+            </div>
+            <br />
+         Id del establecimiento que desea modificar&nbsp;
+         <asp:TextBox ID="txtID" runat="server" Enabled="false" Font-Bold="true" ForeColor="Black" OnTextChanged="txtID_TextChanged"></asp:TextBox>
     <br />
-    <asp:Label ID="Label4" runat="server" Text="Contra"></asp:Label>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="tbContra" runat="server" ForeColor="Black"></asp:TextBox>
+    <asp:Label ID="Label4" runat="server" Text="Inserta nueva vigencia"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Calendar runat="server" ID="dtpF" OnDayRender="dtpF_DayRender" style="margin-top: 0px" OnSelectionChanged="dtpF_SelectionChanged"></asp:Calendar>
+    &nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+    <asp:Button ID="Button2" runat="server" Text="CAMBIAR LA VIGENCIA" OnClick="Button2_Click" />
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <br />
-        <br />
-    <br />
-    <asp:Label ID="Label2" runat="server" Text="Cambiar Universidad"></asp:Label>
-    <br />
-    <asp:Label ID="Label5" runat="server" Text="Nueva Universidad"></asp:Label>
-    &nbsp;&nbsp;
-    <asp:DropDownList ID="ddlUni" runat="server" ForeColor="Black"></asp:DropDownList>
-    <br />
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Button2" runat="server" Text="CAMBIAR MI UNIVERSIDAD" OnClick="Button2_Click" />
-    <br />
-        <br />
-    <br />
-    <asp:Label ID="Label6" runat="server" Text="Modificar Foto"></asp:Label>
-    <br />
-    <asp:Label ID="Label7" runat="server" Text="Seleccionar foto"></asp:Label>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:FileUpload ID="FileUpload1" runat="server" ForeColor="Black" />
-    <br />
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Button1" runat="server" Text="CAMBIAR FOTO" OnClick="Button1_Click" />
-    <br />
-    <asp:Label ID="lbResult" runat="server" Text=""></asp:Label>
 
     </div>
   </section>

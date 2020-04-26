@@ -295,5 +295,10 @@ namespace ForeignersWeb
                 
             }
         }
+
+        protected void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
