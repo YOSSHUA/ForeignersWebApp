@@ -12,11 +12,12 @@
 
          Primero debe escoger el id del establecimiento que desea modificar. Estos son sus inmuebles.<br />
          <br />
-         <asp:GridView ID="GridView1" runat="server">
+         <asp:GridView ID="gvEst" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="btnSelectInm_Click">
+             <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
          </asp:GridView>
          <br />
          Id del establecimiento que desea modificar&nbsp;
-         <asp:TextBox ID="TextBoxID" runat="server"></asp:TextBox>
+         <asp:TextBox ID="txtID" runat="server" Enabled="false" Font-Bold="true"></asp:TextBox>
          <br />
          <br />
          <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
@@ -75,10 +76,15 @@
         <br />
 
             
-    Seleccione una foto<br />
-    <asp:FileUpload runat="server" ID="fUp" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         Esta es la foto actual<br />
+         <asp:Image ID="img" runat="server" Height="300px" Width="260px" />
+         <br />
+
+            
+    Seleccione una foto <asp:FileUpload runat="server" ID="fUp" Height="20px" Width="305px" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
         <asp:Button ID="btnActFoto" runat="server" Text="Actualizar" OnClick="btnActFoto_Click" />
-        <br /><br />    
+         <br />    
         <br />
         <br />
 

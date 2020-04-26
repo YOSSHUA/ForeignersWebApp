@@ -226,5 +226,25 @@ namespace ForeignersWeb
             }
             return resp;
         }
+        public int executeUpdatePicEst(int idEst, byte[] img)
+        {
+            int resp = -1;
+            SqlConnection con;
+            try
+            {
+                con = getConnection();
+                SqlCommand cmd = new SqlCommand("UPDATE Establecimiento SET foto = @foto WHERE idEstab = @idEstab", con);
+                cmd.Parameters.AddWithValue("@idEstab", idEst);
+                cmd.Parameters.AddWithValue("@foto", img);
+                resp = cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            return resp;
+        }
     }
 }

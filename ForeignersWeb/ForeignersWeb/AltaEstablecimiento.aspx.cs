@@ -100,6 +100,11 @@ namespace ForeignersWeb
                     lblLng.Text = lng.Value.ToString();
                     ScriptManager.RegisterStartupScript(this, Page.GetType(), "ClientScript", "initMap()", true);
                 }
+                else
+                {
+                    Response.Write("<script>alert('No se encontró la direccion, intente de nuevo');</script>");
+
+                }
             }
             catch (Exception ex)
             {
