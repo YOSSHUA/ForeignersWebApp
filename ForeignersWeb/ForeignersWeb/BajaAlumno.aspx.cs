@@ -11,22 +11,7 @@ namespace ForeignersWeb
     public partial class BajaAlumno : System.Web.UI.Page
     {
 
-        protected SqlConnection conectarBD()
-        {
-            SqlConnection cnn;
-            try
-            {
-                cnn = new SqlConnection("Data Source=NOEMI-PC;Initial Catalog=BDForeigners;Integrated Security=True");
-                cnn.Open();
-
-            }
-            catch (Exception ex)
-            {
-                cnn = null;
-
-            }
-            return cnn;
-        }
+          
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -34,12 +19,15 @@ namespace ForeignersWeb
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection miConexion = conectarBD();
+            Conexion c = new Conexion();
+            SqlConnection miConexion = c.getConnection();
+            
+            
             if (miConexion != null)
             {
                 try
                 {
-                    String query1 = "DELETE from alumno where correo='" + tbCorreo2 + "'"+"AND contra='"+tbContra2+"'";
+                    String query1 = "DELETE from Alumno where correo='"+Session["mail"].ToString() + "'"+"AND contra='"+tbContra2.Text+"'";
                     SqlCommand sql1 = new SqlCommand(query1, miConexion);
                     int res = sql1.ExecuteNonQuery();
                     if (res != 0)
