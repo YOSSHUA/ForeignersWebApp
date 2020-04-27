@@ -15,15 +15,6 @@ namespace ForeignersWeb
     {
 
         /// <summary>
-        /// lkBtnMap control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lkBtnMap;
-
-        /// <summary>
         /// lkBtnAltaAnuncio control.
         /// </summary>
         /// <remarks>
@@ -103,5 +94,32 @@ namespace ForeignersWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lkBtnModRenta;
+
+        /// <summary>
+        /// gvEst control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvEst;
+
+        /// <summary>
+        /// gvInm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvInm;
+
+        /// <summary>
+        /// gvAnuncios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvAnuncios;
     }
 }

@@ -20,7 +20,7 @@ namespace ForeignersWeb
 
                 Conexion c = new Conexion();
                 int _idC = Convert.ToInt32(Session["idProp"]);
-                c.fillGrid("SELECT idEstab as 'ID'  , catTipoEst.descripcion as 'Tipo' , Establecimiento.nombre as 'Nombre' , Establecimiento.descripcion as 'Descripcion' ,[horaA] as 'Hora de apertura'  ,[horaC] as 'Hora de cierre'  ,[redSocial] as 'Red social' ,[calleNum] as 'Calle y No.' ,[munDel] as 'Delegacion'  ,[codP] as 'CP' ,[estado] as 'Estado' , catPaises.nombre as 'Pais' FROM Establecimiento, catTipoEst, catPaises WHERE Establecimiento.tipo = catTipoEst.idTipo and  catPaises.idPais = Establecimiento.idPais and  idPropietario =" + Session["idProp"], gvEst);
+                c.fillGrid("SELECT  catTipoEst.descripcion as 'Tipo' , Establecimiento.nombre as 'Nombre' , Establecimiento.descripcion as 'Descripcion' ,[horaA] as 'Hora de apertura'  ,[horaC] as 'Hora de cierre'  ,[redSocial] as 'Red social' ,[calleNum] as 'Calle y No.' ,[munDel] as 'Delegacion'  ,[codP] as 'CP' ,[estado] as 'Estado' , catPaises.nombre as 'Pais' FROM Establecimiento, catTipoEst, catPaises WHERE Establecimiento.tipo = catTipoEst.idTipo and  catPaises.idPais = Establecimiento.idPais and  idPropietario =" + Session["idProp"], gvEst);
                 c.fillDDL("SELECT idTipo, descripcion FROM catTipoEst", ddlTipoEst, "catTipoEst", "descripcion", "idTipo");
             }
         }

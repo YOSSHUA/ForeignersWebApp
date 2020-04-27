@@ -10,33 +10,18 @@ namespace ForeignersWeb
 {
     public partial class AltaAlumno : System.Web.UI.Page
     {
-
-        protected SqlConnection conectarBD()
-        {
-            SqlConnection cnn;
-            try
-            {
-                cnn = new SqlConnection("Data Source=NOEMI-PC;Initial Catalog=BDForeigners;Integrated Security=True");
-                cnn.Open();
-                
-            }
-            catch (Exception ex)
-            {
-                cnn = null;
-                
-            }
-            return cnn;
-        }
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                SqlConnection miConexion = conectarBD();
+                Conexion c = new Conexion();
+                SqlConnection miConexion = c.getConnection();
                 if (miConexion != null)
                 {
                     try
                     {
-                        String query = "select * cat.Universidades.nombre from cat.Universidades";
+                        String query = "select catUniversidades.nombre from catUniversidades";
                         SqlCommand sql = new SqlCommand(query, miConexion);
                         SqlDataReader reader = sql.ExecuteReader();
                         while (reader.Read())
@@ -58,27 +43,21 @@ namespace ForeignersWeb
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            SqlConnection miConexion = conectarBD();
+            if(Convert.ToDateTime(tbFechaNac.Text) >= DateTime.Today)
+            {
+                Response.Write("<script>alert('Ingrese una fecha de nacimiento válida');</script>");
+                return;
+            }
+            
+            Conexion c = new Conexion();
+            SqlConnection miConexion = c.getConnection();
             if (miConexion != null)
             {
                 try
                 {
-                    int idAl;
-                    String query1 = "select top(1) idAlumno from alumno order by idAlumno desc";
-                    SqlCommand sql1 = new SqlCommand(query1, miConexion);
-                    SqlDataReader lec1 = sql1.ExecuteReader();
-                    if (lec1.Read())
-                    {
-                        idAl = lec1.GetInt16(0);
-                    }
-                    else
-                    {
-                        idAl = 0;
-                    }
-                    lec1.Close();
-                    String query2 = "insert into alumno values(" + tbCorreo.Text + "','" + tbContra.Text + "','" + tbNombre.Text + "','" + tbApellidoP + "','" + tbApellidoM + "','" + tbFechaNac.Text + "','" + tbSexo + "','" + ddlUni.SelectedIndex + "')";
-                    idAl++;
-                    Session["idAl"] = idAl;
+                    
+                    String query2 = "insert into alumno(correo, contra, nombre, apPat, apMat, fechaN, sexo, idUni) values('" + tbCorreo.Text + "','" + tbContra.Text + "','" + tbNombre.Text + "','" + tbApellidoP.Text + "','" + tbApellidoM.Text + "','" + tbFechaNac.Text + "','" + ddlSexo.SelectedValue + "','" + (ddlUni.SelectedIndex+1) + "')";
+                    
                     SqlCommand sql2 = new SqlCommand(query2, miConexion);
                     int res = sql2.ExecuteNonQuery();
                     if (res != 0)
@@ -93,9 +72,6 @@ namespace ForeignersWeb
             }
         }
 
-        protected void ddlUni_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

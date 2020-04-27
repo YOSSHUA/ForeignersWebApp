@@ -11,6 +11,10 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html lang="">
 <head runat="server">
+    
+    <script src="Content\layout\scripts\jquery.min.js"></script>
+    <script src="Content\layout\scripts\jquery.backtotop.js"></script>
+    <script src="Content\layout\scripts\jquery.mobilemenu.js"></script>
     <title>Foreigners</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
 
@@ -38,22 +42,22 @@ Licence URI: http://www.os-templates.com/template-terms
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
-          <li><asp:HyperLink ID="Link1" runat="server" NavigateUrl="~/Login.aspx" Text="Inicia sesión"></asp:HyperLink></li>
-           <li><a class="drop" href="#">Registrate</a>
+           
+           <li><asp:HyperLink ID="Link1" runat="server" NavigateUrl="~/Login.aspx" Text="Inicia sesión/Registrarse"></asp:HyperLink></li>
+           <li><a class="drop" href="#" >Registrate</a>
             <ul>              
               <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AltaAlumno.aspx" Text="Alumno" ></asp:Hyperlink></li>
               <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AltaCliente.aspx" Text="Cliente"></asp:Hyperlink></li>
             </ul>
           </li>
-            <li><a class="drop" href="#">ALUMNO</a>
+            <li ><a class="drop" href="#" >ALUMNO</a>
             <ul>
               <li><asp:HyperLink ID="Link3" runat="server" NavigateUrl="~/BajaAlumno.aspx" Text="Baja alumno"></asp:Hyperlink></li>
               <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/ModificaAlumno.aspx" Text="Modificar datos"></asp:Hyperlink></li>
             </ul>
           </li>
-          <li><a class="drop" href="#">CLIENTE</a>
-            <ul>
-              
+          <li><a class="drop" href="#" >CLIENTE</a>
+            <ul >              
               <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/AltaAnuncio.aspx" Text="Alta anuncio"></asp:Hyperlink></li>
               <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AltaEstablecimiento.aspx" Text="Alta establecimiento"></asp:Hyperlink></li>
               <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/AltaRenta.aspx" Text="Alta de inmueble en renta"></asp:Hyperlink></li>
@@ -78,78 +82,72 @@ Licence URI: http://www.os-templates.com/template-terms
  </asp:ContentPlaceHolder>
 
 
-<div class="wrapper row4 bgded overlay" style="background-image:url('Content\images\demo\backgrounds\02.pngimages/demo/backgrounds/02.png');">
-  <footer id="footer" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div class="one_third first">
-      <h6 class="heading">Foreigners</h6>
-      <p>¡Te ayudamos a sentirte como en casa!</p>
-      <p class="btmspace-50"> Cada día trabajamos para mejorar, ¡escribenos tus sugerencias!</p>
-      <nav>
-        <ul class="nospace">
-          <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Terms</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="one_third">
-      <h6 class="heading">Contáctanos</h6>
-      <ul class="nospace btmspace-30 linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-          Río Hondo 1, Altavista, Álvaro Obregón, 01080 Ciudad de México, CDMX
-          </address>
-        </li>
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> foreigners@domain.com</li>
-      </ul>
-      <ul class="faico clear">
-        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
-      </ul>
-    </div>
-    <div class="one_third">
-      <h6 class="heading">¿Tienes alguna duda de nuestro servicio a clientes?</h6>
-      <article><a href="#"><img class="btmspace-15" src="images/demo/320x140.png" alt=""></a>
-        <p class="nospace">Escríbenos y nuestro equipo 
-            resolverá tus dudas
+        <div class="wrapper row4 bgded overlay" style="background-image:url('Content\images\demo\backgrounds\02.pngimages/demo/backgrounds/02.png');">
+          <footer id="footer" class="hoc clear"> 
+            <!-- ################################################################################################ -->
+            <div class="one_third first">
+              <h6 class="heading">Foreigners</h6>
+              <p>¡Te ayudamos a sentirte como en casa!</p>
+              <p class="btmspace-50"> Cada día trabajamos para mejorar, ¡escribenos tus sugerencias!</p>
+              <nav>
+                <ul class="nospace">
+                  <li><a href="Inicio.aspx"><i class="fa fa-lg fa-home"></i></a></li>          
+                </ul>
+              </nav>
+            </div>
+            <div class="one_third">
+              <h6 class="heading">Contáctanos</h6>
+              <ul class="nospace btmspace-30 linklist contact">
+                <li><i class="fa fa-map-marker"></i>
+                  <address>
+                  Río Hondo 1, Altavista, Álvaro Obregón, 01080 Ciudad de México, CDMX
+                  </address>
+                </li>
+                <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+                <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
+                <li><i class="fa fa-envelope-o"></i> foreigners@domain.com</li>
+              </ul>
+              <ul class="faico clear">
+                <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+              </ul>
+            </div>
+            <div class="one_third">
+              <h6 class="heading">¿Tienes alguna duda de nuestro servicio a clientes?</h6>
+              <article><a href="#"><img class="btmspace-15" src="images/demo/320x140.png" alt=""></a>
+                <p class="nospace">Escríbenos y nuestro equipo 
+                    resolverá tus dudas
 
-        </p>
-        <h6 class="nospace font-x1"><a href="#">Volver al inicio</a></h6>
-        <time class="font-xs block btmspace-10" datetime="2045-04-05"> <sup> </sup> </time>
+                </p>
+                <h6 class="nospace font-x1"><a href="#">Volver al inicio</a></h6>
+                <time class="font-xs block btmspace-10" datetime="2045-04-05"> <sup> </sup> </time>
         
-      </article>
-    </div>
-    <!-- ################################################################################################ -->
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+              </article>
+            </div>
+            <!-- ################################################################################################ -->
+          </footer>
+        </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <div class="wrapper row5">
+          <div id="copyright" class="hoc clear"> 
+            <!-- ################################################################################################ -->
+            <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+            <!-- ################################################################################################ -->
+          </div>
+        </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
         
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-<!-- JAVASCRIPTS -->
-<script src="Content\layout\scripts\jquery.min.js"></script>
-<script src="Content\layout\scripts\jquery.backtotop.js"></script>
-<script src="Content\layout\scripts\jquery.mobilemenu.js"></script>
+        <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+        <!-- JAVASCRIPTS -->
       </form>
 </body>
 </html>

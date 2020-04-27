@@ -24,7 +24,7 @@ namespace ForeignersWeb
             _centerMap = "19.345442, -99.200090";
             Locations l = new Locations();
             _markers = l.getLocations();
-            
+
         }
        
         

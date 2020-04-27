@@ -15,6 +15,17 @@ namespace ForeignersWeb
             {
                 Response.Redirect("Login.aspx");
             }
+            if (!IsPostBack)
+            {
+                int idP = Convert.ToInt32(Session["idProp"]);
+                Conexion c = new Conexion();
+                string queryEst = "SELECT  idEstab, catTipoEst.descripcion as 'Tipo' , Establecimiento.nombre as 'Nombre' , Establecimiento.descripcion as 'Descripcion' ,[horaA] as 'Hora de apertura'  ,[horaC] as 'Hora de cierre'  ,[redSocial] as 'Red social' ,[calleNum] as 'Calle y No.' ,[munDel] as 'Delegacion'  ,[codP] as 'CP' ,[estado] as 'Estado' , catPaises.nombre as 'Pais' FROM Establecimiento, catTipoEst, catPaises WHERE Establecimiento.tipo = catTipoEst.idTipo and  catPaises.idPais = Establecimiento.idPais and  idPropietario =" + idP;
+                string queryInm = "SELECT idInm,[descripcion], precio, numHab, cocina, tel ,[calleNum] ,[munDel] ,[codP] ,[estado] , catPaises.nombre  FROM Inmueble, catPaises WHERE Inmueble.idPais= catPaises.idPais and idPropietario = " + idP;
+                string queryAn = "SELECT [titulo] ,[fechaIni] as 'Fecha de inicio' ,[fechaVig] as 'Fecha de vigencia'  ,[descripcion]  ,[idEst] 'ID del inmueble' ,[idInm] 'ID del establecimiento' FROM RegAnuncio WHERE idCliente = " + idP;
+                c.fillGrid(queryEst, gvEst);
+                c.fillGrid(queryInm, gvInm);
+                c.fillGrid(queryAn, gvAnuncios);
+            }
         }
 
         protected void lkBtn_Click(object sender, EventArgs e)

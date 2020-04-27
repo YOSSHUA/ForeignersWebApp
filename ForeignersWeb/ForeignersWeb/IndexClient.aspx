@@ -9,9 +9,9 @@
     <h6 class="heading">Cliente</h6></div>
         
     <div style="align-content: center">
-    <asp:LinkButton ID="lkBtnMap" runat="server" OnClick="lkBtn_Click">Ver mapa</asp:LinkButton>
+    
 
-    &nbsp;|&nbsp;<asp:LinkButton ID="lkBtnAltaAnuncio" runat="server" OnClick="lkBtnAltaAnuncio_Click">Alta anuncio</asp:LinkButton>
+    <asp:LinkButton ID="lkBtnAltaAnuncio" runat="server" OnClick="lkBtnAltaAnuncio_Click">Alta anuncio</asp:LinkButton>
         &nbsp;|
     <asp:LinkButton ID="lkBtnAltaEst" runat="server" OnClick="lkBtnAltaEst_Click">Alta establecimiento</asp:LinkButton>
     &nbsp;|
@@ -27,6 +27,13 @@
     &nbsp;| <asp:LinkButton ID="lkBtnModMail" runat="server" OnClick="lkBtnModMail_Click">Modificar correo</asp:LinkButton>
     &nbsp;| <asp:LinkButton ID="lkBtnModRenta" runat="server" OnClick="lkBtnModRenta_Click" >Modificar inmueble</asp:LinkButton>
     </div>
+        <label>Tus establecimientos </label>
+        <asp:GridView ID="gvEst" runat="server"></asp:GridView>
+        <label>Tus inmuebles </label>
+        <asp:GridView ID="gvInm" runat="server"></asp:GridView>
+        <label>Tus anuncios </label>
+        <asp:GridView ID="gvAnuncios" runat="server"></asp:GridView>        
   </section>
+         
 </div>
 </asp:Content>

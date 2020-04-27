@@ -442,6 +442,7 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="DB\Conexion.cs" />
     <Compile Include="Clases\Establecimiento.cs" />
+    <Compile Include="HtmlGenericAnchor.cs" />
     <Compile Include="IndexClient.aspx.cs">
       <DependentUpon>IndexClient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

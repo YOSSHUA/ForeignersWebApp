@@ -14,7 +14,10 @@ namespace ForeignersWeb
           
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["mail"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

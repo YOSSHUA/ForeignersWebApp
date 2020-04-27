@@ -8,7 +8,7 @@
     <div class="wrapper row2">
     <section class="hoc container clear"> 
    
-    <div class="sectiontitle>
+    <div class="sectiontitle">
     <h6 class="heading">Alta anuncio</h6> 
     </div>
         <h2 style="">Ingresa los datos del anuncio aquí</h2>

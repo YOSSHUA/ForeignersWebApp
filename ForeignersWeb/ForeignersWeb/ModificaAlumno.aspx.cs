@@ -15,6 +15,10 @@ namespace ForeignersWeb
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["mail"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             if (!IsPostBack)
             {
                 Conexion c = new Conexion();

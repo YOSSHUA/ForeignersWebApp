@@ -5,7 +5,7 @@
     <div class="wrapper row2">
     <section class="hoc container clear"> 
    
-    <div class="sectiontitle>
+    <div class="sectiontitle">
     <h6 class="heading">Registrate</h6> 
     </div>
         <h2 style="">Ingresa tus datos aquí</h2>
@@ -35,16 +35,21 @@
     <br />
     <asp:Label ID="Label6" runat="server" Text="Fecha Nacimiento"></asp:Label>
     &nbsp;
-    <asp:TextBox ID="tbFechaNac" runat="server" ForeColor="Black"></asp:TextBox>
+    <asp:TextBox ID="tbFechaNac" runat="server" ForeColor="Black" TextMode="Date" format="dd/MM/yyyy"></asp:TextBox>
     <br />
    
     <asp:Label ID="Label8" runat="server" Text="Sexo"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="tbSexo" runat="server" ForeColor="Black"></asp:TextBox>
+    <asp:DropDownList runat="server" ID="ddlSexo">
+        <asp:ListItem Text="Masculino" Value="1" ></asp:ListItem>
+        <asp:ListItem Text="Femenino" Value="0"></asp:ListItem>
+        
+    </asp:DropDownList>
+        
     <br />
     <asp:Label ID="Label9" runat="server" Text="Universidad"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:DropDownList ID="ddlUni" runat="server" OnSelectedIndexChanged="ddlUni_SelectedIndexChanged" Height="16px" Width="127px" ForeColor="Black"></asp:DropDownList>
+    <asp:DropDownList ID="ddlUni" runat="server"  Height="16px" Width="127px" ForeColor="Black"></asp:DropDownList>
     <br />
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
