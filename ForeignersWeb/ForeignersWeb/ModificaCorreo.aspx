@@ -5,7 +5,7 @@
         <div class="wrapper row2">
     <section class="hoc container clear"> 
    
-    <div class="sectiontitle>
+    <div class="sectiontitle">
     <h6 class="heading">Modifica correo</h6> 
     </div>
         <h2 style="">Cambia el correo que tienes registrado aquí</h2>

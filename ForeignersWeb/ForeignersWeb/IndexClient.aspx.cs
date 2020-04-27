@@ -57,5 +57,20 @@ namespace ForeignersWeb
             Response.Redirect("ModificarEstable.aspx");
 
         }
+
+        protected void lkBtnModiAnun_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ModificaAnuncio.aspx");
+        }
+
+        protected void lkBtnModMail_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ModificaCorreo.aspx");
+        }
+
+        protected void lkBtnModRenta_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ModificarRenta.aspx");
+        }
     }
 }

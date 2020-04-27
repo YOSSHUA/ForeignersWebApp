@@ -5,7 +5,7 @@
     <div class="wrapper row2">
     <section class="hoc container clear"> 
    
-    <div class="sectiontitle>
+    <div class="sectiontitle">
     <h6 class="heading">Modificar establecimiento</h6> 
     </div>
         <h2 style="">Modifica los datos de tu establecimiento aquí</h2>
@@ -15,7 +15,7 @@
 
     <div id="divDatos" runat="server">
 
-         Primero debe escoger el id del establecimiento que desea modificar. Estos son sus inmuebles.<br />
+         Primero debe escoger el id del establecimiento que desea modificar. Estos son tus establecimientos<br />
          <br />
          <asp:GridView ID="gvEst" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="btnSelectInm_Click">
              <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />

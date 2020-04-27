@@ -11,20 +11,16 @@ namespace ForeignersWeb
 {
     public partial class ModificaAnuncio : System.Web.UI.Page
     {
+        protected DateTime maxDate;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 Conexion c = new Conexion();
                 int _idC = Convert.ToInt32(Session["idProp"]);
-                c.fillGrid("SELECT * from RegAnuncio WHERE idPropietario =" + Session["idProp"], gvAnun);
+                c.fillGrid("SELECT * from RegAnuncio WHERE idCliente =" + Session["idProp"], gvAnun);
 
             }
-
-        }
-
-        protected void txtID_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -50,7 +46,7 @@ namespace ForeignersWeb
             }
             else
             {
-                if (dtpF.SelectedDate.ToString() == "")
+                if (Calendar1.SelectedDate.ToString() == "")
                     Response.Write("<script>alert('Elige la nueva fecha de vigencia');</script>");
                 else
                 {
@@ -58,12 +54,13 @@ namespace ForeignersWeb
                     if (c != null)
                         try
                         {
-                            string query = String.Format("UPDATE RegAuncio SET fechaVig='{0}' WHERE idAnuncio={1}", dtpF.SelectedDate.ToString("dd/MM/yyyy"), txtID.Text);
+                            string query = String.Format("UPDATE RegAuncio SET fechaVig='{0}' WHERE idAnuncio={1}", Calendar1.SelectedDate.ToString(), txtID.Text);
                             int res = c.executeQuery(query);
 
                             if (res != 0)
                             {
                                 Response.Write("<script>alert('Se modificó correctamente');</script>");
+                                c.fillGrid("SELECT * from RegAnuncio WHERE idCliente =" + Session["idProp"], gvAnun);
                             }
 
                         }
@@ -71,7 +68,7 @@ namespace ForeignersWeb
                         {
                             Response.Write("<script>alert('Error: " + err.ToString() + "');</script>");
                         }
-                    if (txtID.Text == "" || dtpF.SelectedDate.ToString() == "")
+                    if (txtID.Text == "" || Calendar1.SelectedDate.ToString() == "")
                     {
                         Response.Write("<script>alert('Selecciona el anuncio y la fecha de vigencia');</script>");
                     }
@@ -81,10 +78,18 @@ namespace ForeignersWeb
 
         protected void dtpF_DayRender(object sender, DayRenderEventArgs e)
         {
-            if (e.Day.Date <= DateTime.Today)
+            if (e.Day.Date <= Convert.ToDateTime(Session["maxDate"]))
             {
                 e.Day.IsSelectable = false;
             }
+        }
+
+        protected void gvAnun_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtID.Text = HttpUtility.HtmlDecode(gvAnun.SelectedRow.Cells[1].Text);
+            Calendar1.Enabled = true;
+            Session["maxDate"] = Convert.ToDateTime(HttpUtility.HtmlDecode(gvAnun.SelectedRow.Cells[4].Text));
+
         }
     }
 }

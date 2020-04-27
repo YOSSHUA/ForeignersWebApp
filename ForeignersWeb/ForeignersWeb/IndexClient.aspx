@@ -5,8 +5,8 @@
      <div class="wrapper row2">
     <section class="hoc container clear"> 
    
-    <div class="sectiontitle>
-    <h6 class="heading">Cliente</div>
+    <div class="sectiontitle">
+    <h6 class="heading">Cliente</h6></div>
         
     <div style="align-content: center">
     <asp:LinkButton ID="lkBtnMap" runat="server" OnClick="lkBtn_Click">Ver mapa</asp:LinkButton>
@@ -21,10 +21,11 @@
     <asp:LinkButton ID="lkBajaAnuncio" runat="server" OnClick="lkBajaAnuncio_Click">Baja anuncio</asp:LinkButton>
     &nbsp;|
     <asp:LinkButton ID="lkBajaCliente" runat="server" OnClick="lkBajaCliente_Click">Baja cliente</asp:LinkButton>
-    &nbsp;|&nbsp;<asp:LinkButton ID="lkBtnModiEstab" runat="server" OnClick="lkBtnModiEstab_Click">Modificar Estab</asp:LinkButton>
+    &nbsp;|&nbsp;<asp:LinkButton ID="lkBtnModiEstab" runat="server" OnClick="lkBtnModiEstab_Click">Modificar Establecimiento</asp:LinkButton>
     &nbsp;|
-        <asp:LinkButton ID="lkBtnModiAnun" runat="server" OnClick="lkBtnModiAnun_Click">Modificar renta</asp:LinkButton>
-    &nbsp;| <asp:LinkButton ID="lkBtnModiEstab0" runat="server" OnClick="lkBtnModiEstab_Click">Modificar correo</asp:LinkButton>
+        <asp:LinkButton ID="lkBtnModiAn" runat="server" OnClick="lkBtnModiAnun_Click">Modificar anuncio</asp:LinkButton>
+    &nbsp;| <asp:LinkButton ID="lkBtnModMail" runat="server" OnClick="lkBtnModMail_Click">Modificar correo</asp:LinkButton>
+    &nbsp;| <asp:LinkButton ID="lkBtnModRenta" runat="server" OnClick="lkBtnModRenta_Click" >Modificar inmueble</asp:LinkButton>
     </div>
   </section>
 </div>
