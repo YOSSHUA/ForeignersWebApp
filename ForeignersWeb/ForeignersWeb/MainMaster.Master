@@ -2,13 +2,7 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.Master.cs" Inherits="ForeignersWeb.Site1" %>
 
 <!DOCTYPE html>
-<!--
-Template Name: Basend
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
+
 <html lang="">
 <head runat="server">
     
@@ -70,7 +64,6 @@ Licence URI: http://www.os-templates.com/template-terms
 
             </ul>
           </li>
-          <li><a href="Content\pages\sidebar-left.htmll">Contáctanos</a></li>
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -137,8 +130,7 @@ Licence URI: http://www.os-templates.com/template-terms
         <div class="wrapper row5">
           <div id="copyright" class="hoc clear"> 
             <!-- ################################################################################################ -->
-            <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
-            <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+            <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved  </p>            
             <!-- ################################################################################################ -->
           </div>
         </div>
