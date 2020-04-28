@@ -103,6 +103,27 @@ namespace ForeignersWeb
             return resp;
         }
 
+        internal int updatePicRen(int idFoto, byte[] img)
+        {
+            int resp = -1;
+            SqlConnection con;
+            try
+            {
+                con = getConnection();
+                SqlCommand cmd = new SqlCommand("UPDATE catFotosInm SET foto = @foto WHERE idFoto = @idFoto", con);
+                cmd.Parameters.AddWithValue("@idFoto", idFoto);
+                cmd.Parameters.AddWithValue("@foto", img);
+                resp = cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            return resp;
+        }
+
         public int addImageInm(int idInm, byte[] foto)
         {
             int res = -1;

@@ -11,49 +11,46 @@ namespace ForeignersWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if(Session["idProp"] == null)
             {
-                Conexion c = new Conexion();
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                Cliente c = new Cliente();
+                tbCorreoActual.Text = c.getMail(Convert.ToInt32(Session["idProp"]));
             }
       
             
         }
 
-        protected void tbCorreo_TextChanged(object sender, EventArgs e)
+        protected void btnUpMail_Click(object sender, EventArgs e)
         {
-            if (tbCorreoActual.Text == "")
-            {
-                Response.Write("<script>alert('Escribe el correo actual');</script>");
-            }
+            
+            if (tbCorreoNuevo.Text == "")
+                Response.Write("<script>alert('Escribe el correo nuevo');</script>");
             else
             {
-                if (tbCorreoNuevo.Text == "")
-                    Response.Write("<script>alert('Escribe el correo nuevo');</script>");
-                else
-                {
-                    Conexion c = new Conexion();
-                    if (c != null)
-                        try
-                        {
-                            string query = String.Format("UPDATE Cliente SET correo='{0}' WHERE correo='{1}'", tbCorreoActual.Text, tbCorreoNuevo.Text);
-                            int res = c.executeQuery(query);
-
-                            if (res != 0)
-                            {
-                                Response.Write("<script>alert('Se modificó correctamente');</script>");
-                            }
-
-                        }
-                        catch (Exception err)
-                        {
-                            Response.Write("<script>alert('Error: " + err.ToString() + "');</script>");
-                        }
-                    if (tbCorreoActual.Text == "" || tbCorreoNuevo.Text == "")
+                Conexion c = new Conexion();
+                if (c != null)
+                    try
                     {
-                        Response.Write("<script>alert('Escribe el nuevo nombre');</script>");
+                        string query = String.Format("UPDATE Cliente SET correo='{1}' WHERE correo='{0}'", tbCorreoActual.Text, tbCorreoNuevo.Text);
+                        int res = c.executeQuery(query);
+
+                        if (res != 0)
+                        {
+                            Response.Write("<script>alert('Se modificó correctamente');</script>");                            
+                        }
+
                     }
-                }
+                    catch (Exception err)
+                    {
+                        Response.Write("<script>alert('Error: " + err.ToString() + "');</script>");
+                    }
+                
             }
+            
         }
     }
 }

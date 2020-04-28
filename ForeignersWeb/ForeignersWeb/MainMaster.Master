@@ -57,9 +57,9 @@
               <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/AltaRenta.aspx" Text="Alta de inmueble en renta"></asp:Hyperlink></li>
               <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/BajaAnuncio.aspx" Text="Baja anuncio"></asp:Hyperlink></li>
               <li><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/BajaCliente.aspx" Text="Baja cliente"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/ModificaEstable.aspx" Text="Modificar establecimientos"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/ModificarEstable.aspx" Text="Modificar establecimientos"></asp:Hyperlink></li>
               <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/ModificaAnuncio.aspx" Text="Modificar anuncio"></asp:Hyperlink></li>
-              <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/ModificaCorreo.apsx" Text="Modificar correo"></asp:Hyperlink></li>
+              <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/ModificaCorreo.aspx" Text="Modificar correo"></asp:Hyperlink></li>
               <li><asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/ModificaRenta.aspx" Text="Modificar renta"></asp:Hyperlink></li>
 
             </ul>

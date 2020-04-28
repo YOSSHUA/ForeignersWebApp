@@ -12,7 +12,7 @@
         <div style="align-content: center">
     <asp:ScriptManager runat="server" EnablePartialRendering="true"></asp:ScriptManager>
 
-    <asp:Label ID="Label3" runat="server" Text="Correo actual"></asp:Label>
+    <asp:Label ID="Label3" runat="server" Text="Correo actual" Enabled="false"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;
     <asp:TextBox ID="tbCorreoActual" runat="server" ForeColor="Black"></asp:TextBox>
@@ -23,7 +23,7 @@
     <br />
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Button2" runat="server" Text="CAMBIAR MI CORREO" OnClick="Button2_Click" />
+    <asp:Button ID="btnUpMail" runat="server" Text="CAMBIAR MI CORREO" OnClick="btnUpMail_Click" />
     
    
     

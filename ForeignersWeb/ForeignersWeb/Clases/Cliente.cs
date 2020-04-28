@@ -99,6 +99,17 @@ namespace ForeignersWeb
                 }
                     return resp;
         }
+        public string getMail(int idProp)
+        {
+            string resp;
+            Conexion c = new Conexion();
+            SqlDataReader dr = c.getReader("SELECT correo FROM Cliente WHERE idCliente =" + idProp);
+            if (dr.Read())
+                resp = dr.GetString(0);
+            else
+                resp = "";
+            return resp;
+        }
 
     }
 }

@@ -28,10 +28,7 @@
     <br />
     <asp:Label ID="Label4" runat="server" Text="Inserta nueva vigencia"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtCalendarExtender" runat="server"></asp:TextBox>
-            <AjaxToolKit:calendarextender id="Calendar1" popupbuttonid="imgPopup" runat="server" targetcontrolid="txtCalendarExtender" format="dd/MM/yyyy" Enabled="false"> 
-</AjaxToolKit:calendarextender>
-            <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" />
+            <asp:Calendar ID="dtpVigencia" runat="server" OnDayRender="dtpF_DayRender"></asp:Calendar>
             
     &nbsp;<br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;

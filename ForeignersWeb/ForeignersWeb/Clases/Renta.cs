@@ -52,5 +52,36 @@ namespace ForeignersWeb
             }
             return result;
         }
+
+        public byte[] getFotoById(int idPic)
+        {
+            byte[] pic;
+            string query = "SELECT foto FROM catFotosInm WHERE idFoto = '" + idPic + "'";
+            Conexion c = new Conexion();
+            DataTable dt = c.llenarDataTable(query);
+            try
+            {
+                if (dt.Rows.Count != 0)
+                {
+                    pic = (byte[])dt.Rows[0][0];
+
+                }
+                else
+                    pic = null;
+
+            }
+            catch (Exception ex)
+            {
+                pic = null;
+            }
+            return pic;
+        }
+        public int modificarImg(int idFoto, byte[] img)
+        {
+            Conexion c = new Conexion();
+            int result = c.updatePicRen(idFoto, img);
+            return result;
+
+        }
     }
 }

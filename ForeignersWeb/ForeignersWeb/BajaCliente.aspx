@@ -6,7 +6,7 @@
     <section class="hoc container clear"> 
    
     <div class="sectiontitle">
-      <h6 class="heading">Baja Alumno</h6>
+      <h6 class="heading">Baja Cliente</h6>
       <p>¿Estás seguro que te quieres dar de baja? Te extrañaremos</p>
     </div>
         <h2 style="margin-left: 120px">Si deseas eliminar tu cuenta en Foreigners da click en aceptar</h2>

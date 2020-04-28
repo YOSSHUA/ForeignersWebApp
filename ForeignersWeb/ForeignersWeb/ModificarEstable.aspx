@@ -22,10 +22,10 @@
          </asp:GridView>
          <br />
          Id del establecimiento que desea modificar&nbsp;
-         <asp:TextBox ID="txtID" runat="server" Enabled="false" Font-Bold="true" ForeColor="Black" OnTextChanged="txtID_TextChanged"></asp:TextBox>
+         <asp:TextBox ID="txtID" runat="server" Enabled="false" Font-Bold="true" ForeColor="Black" ></asp:TextBox>
          <br />
          <br />
-         <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
+        <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtNom" runat="server" Width="203px" ForeColor="Black"></asp:TextBox>&nbsp;&nbsp;<asp:Button ID="btActNombre" runat="server" Text="Actualizar" OnClick="btActNombre_Click" />
         <br />
@@ -42,8 +42,9 @@
         <br />
         
         <br />
-        <asp:Label ID="lblHa" runat="server" Text="Hora de apertura" format="HH:mm"></asp:Label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox runat="server" ID="txtHA" TextMode="Time" Width="203px" ForeColor="Black"></asp:TextBox>&nbsp;
+        <asp:Label ID="lblHa" runat="server" Text="Hora de apertura" ></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <asp:TextBox runat="server" ID="txtHA" TextMode="Time" Width="203px" ForeColor="Black" format="HH:mm"></asp:TextBox>&nbsp;
         <asp:Button ID="btnActHA" runat="server" Text="Actualizar" OnClick="btnActHA_Click" />
         <br />
         <br />
