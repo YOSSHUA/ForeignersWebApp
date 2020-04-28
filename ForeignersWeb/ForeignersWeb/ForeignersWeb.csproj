@@ -138,6 +138,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\1d905a29-78c4-41cf-8a75-eabf75ec44e4.JPG" />
+    <Content Include="Content\images\4683A5A9-8A33-4357-85A0-E73D619F47E7.JPG" />
+    <Content Include="Content\images\contratando.jpg" />
     <Content Include="Content\images\demo\320x140.png" />
     <Content Include="Content\images\demo\320x220.png" />
     <Content Include="Content\images\demo\avatar.png" />
@@ -149,6 +152,11 @@
     <Content Include="Content\images\demo\imgl.gif" />
     <Content Include="Content\images\demo\imgr.gif" />
     <Content Include="Content\images\demo\index.html" />
+    <Content Include="Content\images\f0bd1031-a30f-4a79-b7b3-eb5f7d137661.JPG" />
+    <Content Include="Content\images\image0.png" />
+    <Content Include="Content\images\IMG_1481.jpg" />
+    <Content Include="Content\images\IMG_5279.JPG" />
+    <Content Include="Content\images\IMG_5280.JPG" />
     <Content Include="Content\images\index.html" />
     <Content Include="Content\images\jocitacos.jpg" />
     <Content Include="Content\images\lolita.jpg" />

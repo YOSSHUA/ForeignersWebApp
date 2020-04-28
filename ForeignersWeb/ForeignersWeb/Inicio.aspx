@@ -87,7 +87,7 @@
         <div class="hgroup">
           <h6 class="heading">Ing.Yosshua Cisneros</h6>
           <em>Director Ejecutivo</em></div>
-        <figure><a href="#"><img src="Content\images\demo\320x220.pngimages" alt=""></a></figure>
+        <figure><a href="#"><img src="Content\images\1d905a29-78c4-41cf-8a75-eabf75ec44e4.JPG" alt=""></a></figure>
         <div class="txtwrap">
           <p> </p>
         </div>
@@ -104,7 +104,7 @@
         <div class="hgroup">
           <h6 class="heading">Ing.Anairam Mar Cuevas</h6>
           <em>Gerente general</em></div>
-        <figure><a href="#"><img src="Content\images\demo\320x220.pngimages" alt=""></a></figure>
+        <figure><a href="#"><img src="Content\images\f0bd1031-a30f-4a79-b7b3-eb5f7d137661.JPG" alt=""></a></figure>
         <div class="txtwrap">
           <p>  </p>
         </div>
@@ -119,26 +119,9 @@
       </article>
       <article class="one_third">
         <div class="hgroup">
-          <h6 class="heading">Ing.Jimena Villalpando</h6>
-          <em>Gerente de Marketing</em></div>
-        <figure><a href="#"><img src="Content\images\demo\320x220.png" alt=""></a></figure>
-        <div class="txtwrap">
-          <p> </p>
-        </div>
-        <footer>
-          <ul class="faico clear">
-            <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
-          </ul>
-        </footer>
-      </article>
-        <article class="one_fourth">
-        <div class="hgroup">
-          <h6 class="heading">Ing.Sofía Prieto</h6>
-          <em>Gerente de Diseño</em></div>
-        <figure><a href="#"><img src="Content\images\demo\320x220.png" alt=""></a></figure>
+          <h6 class="heading">Ing.Jimena V. e Ing.Sofía P.</h6>
+          <em>Gerentes de Marketing</em></div>
+        <figure><a href="#"><img src="Content\images\IMG_5279.JPG" alt=""></a></figure>
         <div class="txtwrap">
           <p> </p>
         </div>
@@ -218,7 +201,7 @@
         <footer><a class="btn" href="#">Read More &raquo;</a></footer>
       </article>
       <article class="one_third">
-        <figure><img src="Content\images\parabien.jpg" alt="">
+        <figure><img src="Content\images\image0.png" alt="">
           <figcaption>
             <time datetime="2045-04-05T08:15+00:00"><strong>05</strong> <em>Apr</em></time>
           </figcaption>
@@ -236,7 +219,7 @@
         <footer><a class="btn" href="#">Read More &raquo;</a></footer>
       </article>
       <article class="one_third">
-        <figure><img src="Content\images\lolita.png" alt="">
+        <figure><img src="Content\images\lolita.jpg" alt="">
           <figcaption>
             <time datetime="2045-04-04T08:15+00:00"><strong>04</strong> <em>Apr</em></time>
           </figcaption>
